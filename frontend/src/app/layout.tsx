@@ -1,4 +1,6 @@
 import './globals.css'
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,8 +13,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+      <>
+        <Nav />
+        <main className='mx-5'>{children}</main>
+        <Footer />
+      </>
   )
 }
