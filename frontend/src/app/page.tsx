@@ -1,4 +1,6 @@
 import ProjectsCard from "@/components/ProjectsCard";
+import React from "react";
+import Pipes from "@/components/Pipes";
 
 const Home = () => {
     return (
@@ -10,6 +12,7 @@ const Home = () => {
                   <p className='text-white mt-3'>Nudimo vse storitve v povezavi s strojnimi inštalacijami...</p>
               </div>
           </div>
+          <Pipes/>
           <h1 className='font-semibold text-xl mb-5'>Projekti</h1>
           <div className='flex w-full flex-wrap'>
               <ProjectsCard />
