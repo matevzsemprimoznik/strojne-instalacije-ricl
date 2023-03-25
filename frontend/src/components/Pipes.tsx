@@ -2,7 +2,7 @@ import Pipe from "@/components/Pipe";
 import PipeEdge from "@/components/PipeEdge";
 
 const Pipes = () => {
-    return <div className='relative flex justify-end absolute right-0 top-0'>
+    return <div className='relative w-full flex justify-end absolute z-10 left-[0px] top-0'>
         <div className='relative w-full'>
             <Pipe classNameContainer='absolute right-0 top-0'/>
             <Pipe classNameContainer='absolute right-[250px] top-0'/>
@@ -18,6 +18,7 @@ const Pipes = () => {
             <PipeEdge classNameContainer='absolute right-[1176px] top-[577px]'/>
             <Pipe classNameContainer='absolute right-[1265px] top-[589px]'/>
             <PipeEdge classNameContainer='absolute right-[1515px] top-[664px] -rotate-90' />
+            <Pipe classNameContainer='absolute right-[1440px] top-[414px] -rotate-90'/>
 
             <Pipe classNameContainer='absolute right-[290px] top-[240px]'/>
             <Pipe classNameContainer='absolute right-[217px] top-[240px] rotate-90 w-[150px] z-5'/>
