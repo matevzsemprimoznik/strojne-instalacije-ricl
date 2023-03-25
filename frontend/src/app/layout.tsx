@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
       <>
         <Nav />
-        <main className='mx-5'>{children}</main>
+        <main>{children}</main>
         <Footer />
       </>
   )
