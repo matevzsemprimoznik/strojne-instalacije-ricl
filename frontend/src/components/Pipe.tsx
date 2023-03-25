@@ -1,20 +1,26 @@
-const Pipe = () => {
-    return <div className='w-fit grid h-16 items-center grid-cols-[1fr_24px]'>
-        <div className='h-12 w-52 bg-gray-600 relative'>
-            <div className="h-[96%] w-full absolute right-0 left-0 overflow-hidden z-10">
-                <div className="wave"></div>
-                <div className="wave"></div>
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="bg-[#42b9f5] w-full h-[70%]"/>
-                </div>
-            </div>
+import {FC} from "react";
+import PipeJoint from "@/components/PipeJoint";
+import {twMerge} from "tailwind-merge";
 
+interface PipeProps {
+    classNameContainer?: string
+    flipHorizontal?: boolean
+}
+const Pipe:FC<PipeProps> = ({classNameContainer, flipHorizontal = false}) => {
+    return <div className={twMerge('w-[250px] h-[250px] flex items-center justify-center', classNameContainer)}>
+            <div className={'w-full grid h-8 items-center' + (flipHorizontal ? ' grid-cols-[12px_1fr]' : ' grid-cols-[1fr_12px]')}>
+                {flipHorizontal && <PipeJoint/>}
+                <div className='h-[60%] w-full bg-gray-600 relative'>
+                        <div className="w-full h-full flex items-center justify-center">
+                            <div className="bg-[#3FB7F1FF] w-full h-[80%] relative overflow-hidden">
+                                <div className="wave"></div>
+                                <div className="wave"></div>
+                            </div>
+                        </div>
+                </div>
+                {!flipHorizontal && <PipeJoint/>}
+            </div>
         </div>
-        <div className='h-full bg-gray-600 relative'>
-            <div className='h-[90%] w-[80%] absolute bg-gray-500 right-0'/>
-            <div className='h-[80%] w-[60%] absolute bg-gray-400 right-0'/>
-        </div>
-    </div>
 }
 
 export default Pipe
