@@ -104,3 +104,44 @@ html, body {
         transform: rotate(90deg);
     }
 }
+
+.water-droplet-animation{
+    animation: water-droplet 0.6s infinite linear;
+    transform: rotate(225deg);
+}
+.water-droplet-animation-2{
+    animation: water-droplet 1.1s infinite linear;
+    transform: rotate(225deg);
+}
+.water-droplet-animation-3{
+    animation: water-droplet 0.8s infinite linear;
+    transform: rotate(225deg);
+}
+
+@keyframes water-droplet {
+    0% {
+        transform: translate(0, 0) rotate(225deg) rotateX(0deg);
+
+    }
+    50% {
+        transform: translate(0, -15px) rotate(225deg) rotateX(45deg);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(0, -30px) rotate(225deg) rotateX(45deg);
+        opacity: 0;
+    }
+}
+
+.wheel-valve-handle-animation{
+    animation: wheel-valve-handle 13s infinite ease-in-out;
+}
+
+@keyframes wheel-valve-handle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-1500deg);
+    }
+}

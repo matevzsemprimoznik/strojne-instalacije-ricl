@@ -3,6 +3,7 @@ import PipeEdge from "@/components/PipeEdge";
 import WheelValveHandle from "@/components/WheelValveHandle";
 import ValveHandle from "@/components/ValveHandle";
 import WaterMeter from "@/components/WaterMeter";
+import WaterDroplets from "@/components/WaterDroplets";
 
 const Pipes = () => {
     return <div className='relative w-full flex justify-end absolute z-10 left-[0px] top-0'>
@@ -21,7 +22,7 @@ const Pipes = () => {
             <PipeEdge classNameContainer='absolute right-[1176px] top-[577px]'/>
             <Pipe classNameContainer='absolute right-[1265px] top-[589px]'/>
             <PipeEdge classNameContainer='absolute right-[1515px] top-[664px] -rotate-90' />
-            <Pipe classNameContainer='absolute right-[1440px] top-[414px] -rotate-90'/>
+            <Pipe classNameContainer='absolute right-[1440px] top-[414px] -rotate-90 z-20'/>
 
             <Pipe classNameContainer='absolute right-[290px] top-[240px]'/>
             <Pipe classNameContainer='absolute right-[217px] top-[240px] rotate-90 w-[150px] z-5'/>
@@ -40,6 +41,7 @@ const Pipes = () => {
             <WheelValveHandle classNameContainer='absolute right-[690px] top-[686px] z-20'/>
             <ValveHandle classNameContainer='top-[290px] right-[540px]'/>
             <WaterMeter classNameContainer='top-[458px] right-[110px] z-20'/>
+            <WaterDroplets/>
         </div>
     </div>
 }
