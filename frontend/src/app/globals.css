@@ -63,3 +63,44 @@ html, body {
     }
 }
 
+
+.water-meter-animation{
+    animation: water-meter 3s infinite linear;
+}
+
+@keyframes water-meter {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(45deg);
+    }
+    40% {
+        transform: rotate(0deg);
+    }
+    60% {
+        transform: rotate(110deg);
+    }
+    80% {
+        transform: rotate(0deg);
+    }
+}
+
+.valve-handle-animation{
+    animation: valve-handle 10s infinite linear;
+}
+
+@keyframes valve-handle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    80% {
+        transform: rotate(90deg);
+    }
+}

@@ -1,9 +1,14 @@
 import ProjectsCard from "@/components/ProjectsCard";
 import React from "react";
-import Pipes from "@/components/Pipes";
 import Hero from "@/components/home/Hero";
+import getProjects from "@/lib/getProjects";
+import getComments from "@/lib/getComments";
 
-const Home = () => {
+export const revalidate = 60
+
+const Home = async () => {
+    const projects = await getProjects()
+    const comments = await getComments()
     return (
       <>
           <Hero/>
@@ -16,5 +21,4 @@ const Home = () => {
       </>
   )
 }
-
 export default Home
