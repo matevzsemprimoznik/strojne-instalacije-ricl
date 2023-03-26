@@ -1,16 +1,21 @@
-import ogrevanjeImg from '../assets/9f15cdb3fd407c2998c4_62668341.jpg';
-import Image from 'next/image'
+import { FC } from 'react';
+import Image, {StaticImageData} from 'next/image'
 
+type ProjectsCardProps = {
+    imgSrc: StaticImageData;
+    title: string;
+};
 
-const ProjectsCard = () => {
+const ProjectsCard: FC<ProjectsCardProps> = ({ imgSrc, title }) => {
     return (
-        <div className='rounded-2xl w-80 h-96 overflow-hidden shadow-md object-fill	relative mr-5 mb-5'>
+        <div className='rounded-xl w-80 h-96 overflow-hidden shadow-md object-fill	relative mr-12 mb-5'>
             <Image
-                src={ogrevanjeImg}
-                alt="Picture of the author"
+                src={imgSrc}
+                alt={title}
                 className='w-full h-full object-cover'
             />
-            <h1 className='absolute bottom-1 text-white w-full text-center'>Urejena kopalnica</h1>
+            <div className='absolute rounded-xl bottom-5 bg-myLightBlue p-3 left-0 right-0 mx-auto w-4/6'><h1 className='font-bold text-black text-sm w-full text-center'>{title}</h1></div>
+
         </div>
     )
 }

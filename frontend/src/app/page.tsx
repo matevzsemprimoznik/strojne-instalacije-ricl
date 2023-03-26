@@ -3,23 +3,42 @@ import React from "react";
 import Hero from "@/components/home/Hero";
 import getProjects from "@/lib/getProjects";
 import getComments from "@/lib/getComments";
+import CounterCard from "@/components/CounterCard";
+import kopalnica from '../assets/KOPALNICA-1_0.jpg';
+import kopalnica2 from '../assets/wallstoris-mattwhite-pulsify-chrom-grey-bathroom-ambiance-4x3.jpg';
+import talnogretje from '../assets/Talno-gretje-2021-03-22-07-53-24.jpg';
+import klima from '../assets/stenska-klima-cena-prednosti-in-slabosti.jpg';
+import Comment from "@/components/Comment";
+
+
+
 import ServicesSection from "@/components/home/ServicesSection";
 
 export const revalidate = 60
 
 const Home = async () => {
-    const projects = await getProjects()
-    const comments = await getComments()
+    //const projects = await getProjects()
+    //const comments = await getComments()
     return (
       <>
           <Hero/>
-          <h1 className='font-semibold text-xl mb-5'>Projekti</h1>
-          <div className='flex w-full flex-wrap'>
-              <ProjectsCard />
-              <ProjectsCard />
-              <ProjectsCard />
+          <CounterCard />
+          <h1 className='font-bold text-4xl mb-16 mx-16'>Naši <span className='text-myBlue'>projekti</span></h1>
+          <div className='flex max-w-full  flex-nowrap mx-16 mb-12'>
+              <ProjectsCard imgSrc={kopalnica} title='Kopalnica' />
+              <ProjectsCard imgSrc={kopalnica2} title='Kopalnica' />
+              <ProjectsCard imgSrc={talnogretje} title='Talno gretje' />
+              <ProjectsCard imgSrc={klima} title='Klimatska naprava' />
+              <ProjectsCard imgSrc={kopalnica} title='Kopalnica' />
           </div>
           <ServicesSection/>
+
+          <h1 className='font-bold text-4xl mb-12 m-16'><span className='text-myBlue'>Mnenja</span> strank </h1>
+          <div className='flex max-w-full  flex-nowrap m-16'>
+              <Comment date='Maribor, 25.3.2023' comment='Super narejeno tako kot mora bit! Res sta prava mojstra na svojem področju.' author='Dejan M.' />
+              <Comment date='Ptuj, 21.1.2023' comment='Zelo priporočam!' author='Marjan N.' />
+              <Comment date='Maribor, 15.2.2023' comment='Vse narejeno tako kot smo se dogovorili.' author='Sara V.' />
+          </div>
       </>
   )
 }
