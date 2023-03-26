@@ -3,6 +3,7 @@ import React from "react";
 import Hero from "@/components/home/Hero";
 import getProjects from "@/lib/getProjects";
 import getComments from "@/lib/getComments";
+import ServicesSection from "@/components/home/ServicesSection";
 
 export const revalidate = 60
 
@@ -18,6 +19,7 @@ const Home = async () => {
               <ProjectsCard />
               <ProjectsCard />
           </div>
+          <ServicesSection/>
       </>
   )
 }
