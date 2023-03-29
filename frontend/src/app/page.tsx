@@ -20,12 +20,13 @@ export const revalidate = 60
 
 const Home = async () => {
     const projects = await getProjects()
+    console.log(projects)
     //const comments = await getComments()
     return (
       <>
           <Hero/>
           {/*<CounterSection/>*/}
-          <ProjectSection/>
+          <ProjectSection projects={projects}/>
           <ServicesSection/>
 
           <h1 className='font-bold text-4xl mb-12 m-16'><span className='text-myBlue'>Mnenja</span> strank </h1>
