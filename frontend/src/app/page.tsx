@@ -13,24 +13,19 @@ import Comment from "@/components/Comment";
 
 
 import ServicesSection from "@/components/home/ServicesSection";
+import CounterSection from "@/components/home/CounterSection";
+import ProjectSection from "@/components/home/ProjectSection";
 
 export const revalidate = 60
 
 const Home = async () => {
-    //const projects = await getProjects()
+    const projects = await getProjects()
     //const comments = await getComments()
     return (
       <>
           <Hero/>
-          <CounterCard />
-          <h1 className='font-bold text-4xl mb-16 mx-16'>Naši <span className='text-myBlue'>projekti</span></h1>
-          <div className='flex max-w-full  flex-nowrap mx-16 mb-12'>
-              <ProjectsCard imgSrc={kopalnica} title='Kopalnica' />
-              <ProjectsCard imgSrc={kopalnica2} title='Kopalnica' />
-              <ProjectsCard imgSrc={talnogretje} title='Talno gretje' />
-              <ProjectsCard imgSrc={klima} title='Klimatska naprava' />
-              <ProjectsCard imgSrc={kopalnica} title='Kopalnica' />
-          </div>
+          {/*<CounterSection/>*/}
+          <ProjectSection/>
           <ServicesSection/>
 
           <h1 className='font-bold text-4xl mb-12 m-16'><span className='text-myBlue'>Mnenja</span> strank </h1>
