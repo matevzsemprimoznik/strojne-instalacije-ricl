@@ -3,14 +3,15 @@ export interface Project {
     attributes: {
         title: string;
         description: string;
+        image: string
     }
 }
 
 export interface Comment{
     id: number;
     attributes: {
-        name: string;
-        surname: string;
+        author: string;
+        date: string;
         comment: string;
     }
 }

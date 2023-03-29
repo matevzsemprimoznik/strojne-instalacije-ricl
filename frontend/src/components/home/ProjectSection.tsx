@@ -9,10 +9,10 @@ import {Project} from "@/types";
 interface ProjectSectionProps {
     projects: Project[]
 }
-const ProjectSection:FC<ProjectSectionProps> = ({projects}) => {
+const ProjectSection:FC<ProjectSectionProps> = ({projects= []}) => {
     return <div>
-        <h1 className='font-bold text-4xl mb-16 mx-32'>Naši <span className='text-custom-blue'>projekti</span></h1>
-        <div className='flex max-w-full flex-nowrap mx-32 mb-12'>
+        <h1 className='font-bold text-4xl mb-16 mx-24'>Naši <span className='text-custom-blue'>projekti</span></h1>
+        <div className='flex max-w-full flex-nowrap mx-24 mb-12'>
             {projects.map((project, index) => <ProjectsCard key={index} imgSrc={kopalnica} title={project.attributes.title}/>)}
         </div>
     </div>
