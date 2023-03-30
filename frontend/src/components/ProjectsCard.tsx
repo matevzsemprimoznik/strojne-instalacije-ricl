@@ -8,7 +8,7 @@ type ProjectsCardProps = {
 
 const ProjectsCard: FC<ProjectsCardProps> = ({ imgSrc, title }) => {
     return (
-        <div className='rounded-xl w-96 h-96 overflow-hidden shadow-md object-fill	relative mr-12 mb-5'>
+        <div className='rounded-xl relative mr-5 h-96 overflow-hidden shadow-md object-fill'>
             <Image
                 src={imgSrc}
                 alt={title}

@@ -48,6 +48,22 @@ const Home = async () => {
                 image: 'sgkjfhgkdgfg'
             }
         },
+        {
+            id: 1,
+            attributes: {
+                title: 'Kopalnica',
+                description: 'fdgjdfhgf',
+                image: 'sgkjfhgkdgfg'
+            }
+        },
+        {
+            id: 1,
+            attributes: {
+                title: 'Kopalnica',
+                description: 'fdgjdfhgf',
+                image: 'sgkjfhgkdgfg'
+            }
+        },
     ]
 
     const comments: Comment[] = [
