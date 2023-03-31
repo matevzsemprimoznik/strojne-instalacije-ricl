@@ -1,5 +1,7 @@
-import { FC } from 'react';
+"use client"
+import {FC, useState} from 'react';
 import Image, {StaticImageData} from 'next/image'
+import classNames from 'classnames';
 
 type ProjectsCardProps = {
     imgSrc: string;
@@ -7,16 +9,25 @@ type ProjectsCardProps = {
 };
 
 const ProjectsCard: FC<ProjectsCardProps> = ({ imgSrc, title }) => {
-    return (
-        <div className='rounded-xl relative mr-5 h-96 overflow-hidden shadow-md object-fill'>
-            <Image
-                src={imgSrc}
-                alt={title}
-                className='w-full h-full object-cover'
-                fill
-            />
-            <div className='absolute rounded-xl bottom-5 bg-myLightBlue p-3 left-0 right-0 mx-auto w-4/6'><h1 className='font-bold text-black text-sm w-full text-center'>{title}</h1></div>
+    const [isHovered, setIsHovered] = useState(false);
 
+    const overlayClasses = classNames('absolute bg-myLightBlue bottom-0 left-0 right-0 top-auto transition-all duration-500', {
+        'h-full': isHovered,
+        'h-0': !isHovered,
+    });
+
+    return (
+        <div
+            className='relative mr-5 h-96 rounded-xl overflow-hidden shadow-md object-fill'
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            <Image src={imgSrc} alt={title} layout='fill' objectFit='cover' />
+            <div className={overlayClasses}>
+                <div className='flex items-center justify-center h-full'>
+                    <h1 className={classNames('w-full', 'mx-auto', 'p-3', 'text-center', 'rounded-xl', 'font-bold', 'text-black', 'text-sm', { 'invisible': !isHovered })}>{title}</h1>
+                </div>
+            </div>
         </div>
     )
 }
