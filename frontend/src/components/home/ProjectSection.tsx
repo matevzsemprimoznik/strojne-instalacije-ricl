@@ -31,7 +31,7 @@ const ProjectSection:FC<ProjectSectionProps> = ({projects= []}) => {
         <h1 className='font-bold text-4xl mb-16 mx-24'>Naši <span className='text-custom-blue'>projekti</span></h1>
         <div className=' max-w-full mx-24 mb-12' >
             <Slider {...settings}>
-                {projects.map((project, index) => <ProjectsCard key={index} imgSrc={kopalnica} title={project.attributes.title}/>)}
+                {projects.map((project, index) => <ProjectsCard key={index} imgSrc={project?.attributes?.images?.data[0]?.attributes?.formats?.medium?.url} title={project.attributes.title}/>)}
             </Slider>
         </div>
 

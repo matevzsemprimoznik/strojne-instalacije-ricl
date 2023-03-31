@@ -1,9 +1,24 @@
+interface Image {
+    id: number,
+    attributes: {
+        formats: {
+            small: {
+                url: string;
+            },
+            medium: {
+                url: string;
+            }
+        }
+    }
+}
 export interface Project {
     id: number;
     attributes: {
         title: string;
         description: string;
-        image: string
+        images: {
+            data: Image[];
+        }
     }
 }
 

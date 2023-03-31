@@ -22,7 +22,7 @@ const Footer = () => {
             <div className='w-full h-full py-20 flex justify-between container m-auto'>
                 <div>
                     <h3 className='text-white text-2xl font-bold mb-4'>PODJETJE</h3>
-                    <p className='text-white text-xl'>SUGO d.o.o</p>
+                    <p className='text-white text-xl'>Ričl d.o.o</p>
                     <p className='text-white text-xl'>Spodnji Jakobski Dol 45</p>
                     <p className='text-white text-xl'>2222 Jakobski dol</p>
                     <p className='text-white text-xl'>Slovenija</p>
@@ -35,8 +35,8 @@ const Footer = () => {
                 </div>
                 <div>
                     <h3 className='text-white text-2xl font-bold mb-4'>POVEZAVE</h3>
-                    <p><Link className='text-white text-xl' href="/projekti">Projekti</Link></p>
-                    <p><Link className='text-white text-xl' href="/o-nas">O nas</Link></p>
+                    <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href="/projekti">Projekti</Link></p>
+                    <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href="/o-nas">O nas</Link></p>
                 </div>
             </div>
 

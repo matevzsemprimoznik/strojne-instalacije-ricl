@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Image, {StaticImageData} from 'next/image'
 
 type ProjectsCardProps = {
-    imgSrc: StaticImageData;
+    imgSrc: string;
     title: string;
 };
 
@@ -13,6 +13,7 @@ const ProjectsCard: FC<ProjectsCardProps> = ({ imgSrc, title }) => {
                 src={imgSrc}
                 alt={title}
                 className='w-full h-full object-cover'
+                fill
             />
             <div className='absolute rounded-xl bottom-5 bg-myLightBlue p-3 left-0 right-0 mx-auto w-4/6'><h1 className='font-bold text-black text-sm w-full text-center'>{title}</h1></div>
 
