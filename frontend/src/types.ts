@@ -22,11 +22,19 @@ export interface Project {
     }
 }
 
-export interface Comment{
+export interface Comment {
     id: number;
     attributes: {
         author: string;
         date: string;
         comment: string;
     }
+}
+
+export interface ContactMessage {
+    token: string;
+    email: string;
+
+    message: string;
+    subject: string;
 }

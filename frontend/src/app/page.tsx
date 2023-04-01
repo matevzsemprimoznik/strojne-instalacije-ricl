@@ -8,14 +8,13 @@ import getComments from "@/lib/getComments";
 import ServicesSection from "@/components/home/ServicesSection";
 import ProjectSection from "@/components/home/ProjectSection";
 import CommentSection from "@/components/home/CommentSection";
+import ContactUsSection from "@/components/home/ContactUsSection";
 
 export const revalidate = 60
 
 const Home = async () => {
     const projects = await getProjects()
     const comments = await getComments()
-
-    console.log(projects)
 
     return (
       <>
@@ -24,6 +23,7 @@ const Home = async () => {
           <ProjectSection projects={projects}/>
           <ServicesSection/>
           <CommentSection comments={comments}/>
+          <ContactUsSection/>
       </>
   )
 }

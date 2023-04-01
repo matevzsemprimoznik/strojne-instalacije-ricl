@@ -8,15 +8,13 @@ interface PipeEdgeProps {
 }
 const PipeEdge:FC<PipeEdgeProps> = ({classNameContainer}) => {
     return <div className={twMerge('h-[130px] w-[130px] flex justify-end items-end', classNameContainer)}>
-        <div className='relative w-[66px] h-[66px]'>
-            <div className='relative grid grid-cols-[1fr_12px] grid-rows-[1fr_12px] items-end justify-end w-full h-full overflow-hidden'>
-                <div className="quarter_ring relative overflow-hidden">
-                    <div className='circle-animation absolute w-[93px] h-[93px] top-3 left-3 z-10'/>
-                </div>
+        <div className='relative w-[100px] h-[100px]'>
+            <div className='relative grid grid-cols-[1fr_24px] grid-rows-[1fr_24px] items-end justify-end w-full h-full overflow-hidden'>
+                <div className="quarter_ring relative overflow-hidden"></div>
                 <div className='w-full h-full flex justify-start'>
-                    <PipeJoint classNameContainer='h-16 w-full justify-self-start'/>
+                    <PipeJoint classNameContainer='justify-self-start h-[60px]'/>
                 </div>
-                <PipeJoint classNameContainer='w-[20px]'/>
+                <PipeJoint classNameContainer='w-[60px]'/>
             </div>
         </div>
     </div>
