@@ -19,19 +19,19 @@ const Footer = () => {
                     </defs>
                 </svg>
             </div>
-            <div className='w-full h-full py-20 flex justify-between container m-auto'>
+            <div className='w-full h-full py-14 flex justify-between container m-auto'>
                 <div>
                     <h3 className='text-white text-2xl font-bold mb-4'>PODJETJE</h3>
-                    <p className='text-white text-xl'>Ričl d.o.o</p>
-                    <p className='text-white text-xl'>Spodnji Jakobski Dol 45</p>
-                    <p className='text-white text-xl'>2222 Jakobski dol</p>
+                    <p className='text-white text-xl'>DAVORIN RIČL s.p.</p>
+                    <p className='text-white text-xl'>Kremberk 47B, Kremberk</p>
+                    <p className='text-white text-xl'> 2233 SV. ANA V SLOVENSKIH GORICAH</p>
                     <p className='text-white text-xl'>Slovenija</p>
                 </div>
                 <div>
                     <h3 className='text-white text-2xl font-bold mb-4'>KONTAKT</h3>
-                    <p className='text-white text-xl'>+386 40 123 456</p>
-                    <p className='text-white text-xl'>+386 40 123 456</p>
-                    <p className='text-white text-xl'>cncgolob@gmail.com</p>
+                    <p className='text-white text-xl'>+386 41 508744</p>
+                    <p className='text-white text-xl'>+386 41 508744</p>
+                    <p className='text-white text-xl'>davorinricl@gmail.com</p>
                 </div>
                 <div>
                     <h3 className='text-white text-2xl font-bold mb-4'>POVEZAVE</h3>

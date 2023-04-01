@@ -1,14 +1,12 @@
-import Pipes from "@/components/Pipes";
 import React from "react";
-import Image from "next/image";
-import HeroImage from '../../assets/hero-image.svg'
+import HeroButton from "@/components/home/HeroButton";
 
 const Hero = () => {
     return <div className='h-[850px]'>
         <div className='container m-auto py-28'>
             <h1 className='text-6xl text-white font-bold tracking-wide'>Potrebujete kakovostne <br/> strojne inštalacije?</h1>
             <p className='text-white text-2xl mt-10'>Z dolgoletnimi izkušnjami vam nudimo kakovostne in <br/> zanesljive rešitve na področju strojnih inštalacij.</p>
-            <button className='bg-white text- text-lg font-bold px-10 py-4 rounded-3xl mt-14'>Kontaktirajte nas</button>
+            <HeroButton/>
         </div>
 
 

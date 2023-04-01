@@ -7,8 +7,8 @@ import ContactForm from "@/components/home/ContactForm";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 const ContactUsSection = () => {
-    return <div className='w-full px-24 flex mt-52 mb-20'>
-        <div className='grid grid-cols-2 shadow-2xl pt-16 pl-12 mb-20 rounded-3xl grow'>
+    return <div className='w-full px-24 flex mt-52 mb-20' id='contact-us'>
+        <div className='grid grid-cols-2 shadow-2xl pt-16 pr-20 pl-12 mb-20 rounded-3xl grow'>
             <div className='flex-col flex'>
                 <div className='pl-8'>
                     <div className='flex flex-row items-center'>
@@ -41,7 +41,7 @@ const ContactUsSection = () => {
                     <WheelValveHandle classNameContainer='absolute bottom-[-10px] left-[320px]'/>
                 </div>
             </div>
-            <div className='pl-20 pr-10 pb-20 pt-4'>
+            <div className='pl-20 pr-0 pb-20 pt-4'>
                 <GoogleReCaptchaProvider
                     reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
                     scriptProps={{
