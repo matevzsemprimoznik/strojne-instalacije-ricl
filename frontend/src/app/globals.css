@@ -13,6 +13,11 @@ html, body {
     min-height: 100%;
     background-color: transparent;
 }
+@media screen and (max-width: 768px) {
+    html, body {
+        font-size: 12px;
+    }
+}
 
 .lds-ring {
     display: inline-block;
