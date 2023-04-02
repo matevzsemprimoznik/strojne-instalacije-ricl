@@ -17,7 +17,6 @@ const RootLayout: FC<RootLayoutProps> = ({children}) => {
     return (
         <html lang="en">
             <body>
-                <Nav/>
                 <main>{children}</main>
                 <Footer/>
             </body>

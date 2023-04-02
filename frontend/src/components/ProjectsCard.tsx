@@ -2,13 +2,15 @@
 import {FC, useState} from 'react';
 import Image, {StaticImageData} from 'next/image'
 import classNames from 'classnames';
+import {twMerge} from "tailwind-merge";
 
 type ProjectsCardProps = {
     imgSrc: string;
     title: string;
+    classNameContainer?: string;
 };
 
-const ProjectsCard: FC<ProjectsCardProps> = ({ imgSrc, title }) => {
+const ProjectsCard: FC<ProjectsCardProps> = ({ imgSrc, title, classNameContainer }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     const overlayClasses = classNames('absolute bg-myLightBlue bottom-0 left-0 right-0 top-auto transition-all duration-500', {
@@ -18,7 +20,7 @@ const ProjectsCard: FC<ProjectsCardProps> = ({ imgSrc, title }) => {
 
     return (
         <div
-            className='relative mr-5 h-96 rounded-xl overflow-hidden shadow-md object-fill'
+            className={twMerge('relative mr-5 h-96 rounded-xl overflow-hidden shadow-md object-fill', classNameContainer)}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
