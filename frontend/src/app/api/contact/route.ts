@@ -8,12 +8,10 @@ sgMail.setApiKey(process.env.SANDGRID_TOKEN || '')
 export async function POST(request: Request) {
     try{
         const data:ContactMessage = await request.json();
-        console.log(data)
 
-        const recaptchaData:any = await axios.post('https://www.google.com/recaptcha/api/siteverify', `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${data.token}`, {headers: {"Content-Type": "application/x-www-form-urlencoded"}})
+        const recaptchaData:any = await axios.post('https://www.google.com/recaptcha/api/siteverify', {secret: process.env.RECAPTCHA_SECRET_KEY, response: data.token }, {headers: {"Content-Type": "application/x-www-form-urlencoded"}})
 
-        console.log(recaptchaData.score)
-        if(recaptchaData.score <= 0.5)
+        if( recaptchaData.data.success == false || recaptchaData.data.score <= 0.5)
             return new Response('Prišlo je do napake pri izpolnjevanju obrazca. Prosimo poskusite kasneje ali pa nas kontaktirajte na drug način.', {status: 400});
 
         if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(data.email)))
@@ -32,6 +30,7 @@ export async function POST(request: Request) {
        return new Response('Uspešno poslano. Odgovorili vam bomo v najkrajšem možnem času.', {status: 200})
     }
     catch (e){
+        console.log(e)
         return new Response('Prišlo je do napake na strežniku. Prosimo poskusite kasneje ali pa nas kontaktirajte na drug način.', {status: 500});
     }
 }
