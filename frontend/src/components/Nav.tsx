@@ -10,8 +10,8 @@ const Nav:FC<NavProps> = ({textColor='text-black'}) => {
         <div className='flex py-8 container m-auto justify-between'>
             <Link className={twMerge('text-3xl font-bold', textColor)} href="/">Strojne inštalacije <span className='text-myBlue'>Ričl</span></Link>
             <div className='flex mx-5'>
-                <Link className={twMerge('text-lg mt-1 self-start hover-underline-animation', textColor)} href="/projekti">Projekti</Link>
-                <Link className={twMerge('ml-12 mt-1 self-start text-lg hover-underline-animation whitespace-nowrap', textColor)} href="/o-nas">O nas</Link>
+                <Link className={twMerge('text-lg mt-1 self-start hover-underline-animation', textColor, textColor === 'text-white' ? 'after:bg-white' : 'after:bg-black')} href="/projekti">Projekti</Link>
+                <Link className={twMerge('ml-12 mt-1 self-start text-lg hover-underline-animation whitespace-nowrap', textColor, textColor === 'text-white' ? 'after:bg-white' : 'after:bg-black')} href="/o-nas">O nas</Link>
             </div>
         </div>
     )

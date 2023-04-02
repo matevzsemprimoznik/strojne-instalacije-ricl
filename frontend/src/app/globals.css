@@ -4,7 +4,7 @@
 
 @layer components {
     .container {
-        @apply max-w-[1500px];
+        @apply max-w-[1700px];
     }
 }
 
@@ -220,7 +220,6 @@ input, textarea{
     height: 2px;
     bottom: 0px;
     left: 0;
-    background-color: white;
     transform-origin: bottom left;
     transition: transform 0.25s ease-out;
 }
