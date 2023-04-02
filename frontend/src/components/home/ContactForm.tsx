@@ -31,7 +31,6 @@ const ContactForm = () => {
             setError(null)
         }
         catch (e) {
-            console.log(e)
             setLoading(false)
             setResponse(null)
             setError('Napaka pri pošiljanju sporočila. Poskusite znova.')

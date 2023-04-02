@@ -8,8 +8,8 @@ import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 const ContactUsSection = () => {
     return <div className='w-full px-24 flex mt-52 mb-20' id='contact-us'>
-        <div className='grid grid-cols-2 shadow-2xl pt-16 pr-20 pl-12 mb-20 rounded-3xl grow'>
-            <div className='flex-col flex'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 shadow-2xl mb-20 rounded-3xl grow'>
+            <div className='flex-col flex pt-8 md:pt-16 md:pl-12 pr-8 md:pr-20 lg:pr-0'>
                 <div className='pl-8'>
                     <div className='flex flex-row items-center'>
                         <div className='w-16 h-16'>
@@ -34,14 +34,13 @@ const ContactUsSection = () => {
                         na vaše vprašanje zato da čim prej pridete do informacije, ki
                         jo potrebujete. Z veseljem bom del vašega naslednjega projekta, ki se ga boste lotili.</p>
                 </div>
-                <div className='relative grow'>
+                <div className='hidden lg:block relative grow'>
                     <PipeEdge classNameContainer='absolute left-0 bottom-0'/>
-                    <Pipe classNameContainer='absolute left-[130px] -bottom-[55px]'/>
-                    <PipeEdge classNameContainer='absolute left-[490px] bottom-0 rotate-90'/>
-                    <WheelValveHandle classNameContainer='absolute bottom-[-10px] left-[320px]'/>
+                    <Pipe classNameContainer='absolute left-[130px] -bottom-[55px]' style={{width: 'calc(100% - 140px)'}}/>
+                    <PipeEdge classNameContainer='absolute -right-[100px] bottom-0 rotate-90'/>
                 </div>
             </div>
-            <div className='pl-20 pr-0 pb-20 pt-4'>
+            <div className='pl-8 md:pl-20 pb-20 pt-8 md:pt-24 pr-8 md:pr-20'>
                 <GoogleReCaptchaProvider
                     reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
                     scriptProps={{
@@ -53,6 +52,11 @@ const ContactUsSection = () => {
                 >
                 <ContactForm/>
                 </GoogleReCaptchaProvider>
+            </div>
+            <div className='lg:hidden relative h-24'>
+                <PipeEdge classNameContainer='absolute left-[0px] bottom-0'/>
+                <Pipe classNameContainer='absolute -z-10 left-[130px] -bottom-[55px]' style={{width: 'calc(100% - 250px)'}}/>
+                <PipeEdge classNameContainer='absolute right-[0px] bottom-0 rotate-90'/>
             </div>
         </div>
     </div>
