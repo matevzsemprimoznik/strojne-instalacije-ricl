@@ -52,6 +52,13 @@ input, textarea{
     outline: none;
 }
 
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
 .wave {
     background: url(/path9.svg) repeat-x;
     background-size: 10% 100%;
@@ -208,4 +215,8 @@ input, textarea{
 .hover-underline-animation:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+.slick-disabled{
+    opacity: 0.4 !important;
+    cursor: default;
 }

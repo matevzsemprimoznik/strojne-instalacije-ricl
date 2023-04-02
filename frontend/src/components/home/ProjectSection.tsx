@@ -8,6 +8,7 @@ import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Carousel from "@/components/home/Carousel";
 
 interface ProjectSectionProps {
     projects: Project[]
@@ -30,9 +31,9 @@ const ProjectSection:FC<ProjectSectionProps> = ({projects= []}) => {
         </div>
         <h2 className='font-bold text-4xl mb-16 mx-24'>Naši <span className='text-custom-blue'>projekti</span></h2>
         <div className=' max-w-full mx-24 mb-12' >
-            <Slider {...settings}>
+            <Carousel>
                 {projects.map((project, index) => <ProjectsCard key={index} imgSrc={project?.attributes?.images?.data[0]?.attributes?.formats?.medium?.url} title={project.attributes.title}/>)}
-            </Slider>
+            </Carousel>
         </div>
 
 
