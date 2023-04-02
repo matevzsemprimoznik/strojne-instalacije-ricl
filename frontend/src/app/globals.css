@@ -2,11 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .container {
+        @apply max-w-[1500px];
+    }
+}
+
 html, body {
     margin: 0;
     min-height: 100%;
-    background-color: #fffff;
-    height: 100px;
+    background-color: transparent;
 }
 
 .lds-ring {
@@ -55,8 +60,11 @@ input, textarea{
 .arrow {
     border: solid black;
     border-width: 0 3px 3px 0;
-    display: inline-block;
     padding: 3px;
+}
+
+.grecaptcha-badge{
+    display: none !important;
 }
 
 .wave {
