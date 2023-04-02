@@ -15,7 +15,7 @@ const ServicesSection = () => {
             <div className='md:ml-14 w-72 text-center flex justify-center items-center bg-white h-20 border-4 border-custom-light-blue text-custom-blue hover:border-custom-blue transition duration-500 text-lg font-bold rounded-3xl'><p>Talno gretje</p></div>
             <div className='md:mr-14 justify-self-end flex justify-center items-center bg-white w-72 text-center h-20 border-4 border-custom-light-blue hover:border-custom-blue transition duration-500 text-custom-blue text-lg font-bold rounded-3xl'><p>Toplotne črpalke</p></div>
 
-            <Image src={ServicesSectionImage} alt='services-section-image' style={{minWidth: '500px', width: '400px', zIndex: -1}} className='opacity-40 lg:opacity-100 absolute top-2/3 left-1/2 -translate-y-1/2 -translate-x-1/2 -z-10'/>
+            <Image src={ServicesSectionImage} alt='services-section-image' style={{minWidth: '500px', width: '400px', zIndex: -1}} className='opacity-40 lg:opacity-100 top-2/3 left-1/2 -translate-y-1/2 -translate-x-1/2 -z-10 hidden sm:block absolute'/>
         </div>
     </div>
 }

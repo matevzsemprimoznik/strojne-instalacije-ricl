@@ -7,7 +7,7 @@ interface CommentSectionProps {
     comments: CommentType[]
 }
 const CommentSection:FC<CommentSectionProps> = ({comments= []}) => {
-    return <div className='pt-20 container'>
+    return <div className='pt-10 sm:pt-20 container'>
         <h2 className='font-bold text-4xl mb-12'><span className='text-custom-blue'>Mnenja</span> strank </h2>
         <div className='my-16'>
             <Carousel>

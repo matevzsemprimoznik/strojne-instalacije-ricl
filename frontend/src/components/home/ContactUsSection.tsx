@@ -7,7 +7,7 @@ import ContactForm from "@/components/home/ContactForm";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 const ContactUsSection = () => {
-    return <div className='w-full container flex mt-52 mb-20' id='contact-us'>
+    return <div className='w-full container flex mt-32 sm:mt-52 mb-14 sm:mb-20' id='contact-us'>
         <div className='grid grid-cols-1 lg:grid-cols-2 shadow-2xl mb-20 rounded-3xl grow'>
             <div className='flex-col flex pt-8 md:pt-16 md:pl-12 pr-8 md:pr-20 lg:pr-0'>
                 <div className='pl-8'>
@@ -53,7 +53,7 @@ const ContactUsSection = () => {
                 <ContactForm/>
                 </GoogleReCaptchaProvider>
             </div>
-            <div className='lg:hidden relative h-24'>
+            <div className='lg:hidden relative h-24 scale-75 sm:scale-100 origin-[0_bottom] w-[133%] sm:w-full'>
                 <PipeEdge classNameContainer='absolute left-[0px] bottom-0'/>
                 <Pipe classNameContainer='absolute -z-10 left-[130px] -bottom-[55px]' style={{width: 'calc(100% - 250px)'}}/>
                 <PipeEdge classNameContainer='absolute right-[0px] bottom-0 rotate-90'/>

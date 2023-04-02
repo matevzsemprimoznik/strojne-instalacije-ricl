@@ -19,6 +19,9 @@ module.exports = {
       }
     },
     extend: {
+      screens: {
+        'xs': '350px',
+      },
       colors: {
         myBlue: '#00A3FF',
         "custom-blue": "#1188ff",

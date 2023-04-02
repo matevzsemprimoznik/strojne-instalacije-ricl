@@ -2,16 +2,16 @@ import React from "react";
 import HeroButton from "@/components/home/HeroButton";
 
 const Hero = () => {
-    return <div className='h-[570px] md:h-[850px]'>
-        <div className='container m-auto py-28'>
-            <h1 className='text-6xl text-white font-bold tracking-wide'>Potrebujete kakovostne <br/> strojne inštalacije?</h1>
+    return <div className='h-[530px] xs:h-[530px] sm:h-[580px] md:h-[850px]'>
+        <div className='container m-auto py-8 sm:py-28'>
+            <h1 className='text-5xl sm:text-6xl text-white font-bold tracking-wide'>Potrebujete kakovostne <br/> strojne inštalacije?</h1>
             <p className='text-white text-2xl mt-10'>Z dolgoletnimi izkušnjami vam nudimo kakovostne in <br/> zanesljive rešitve na področju strojnih inštalacij.</p>
             <HeroButton/>
         </div>
 
 
 
-        <div className='absolute top-0 w-full h-[700px] md:h-full -z-10 overflow-x-hidden'>
+        <div className='absolute top-0 w-full h-[750px] xs:h-[650px] sm:h-[640px] md:h-[1000px] -z-10 overflow-x-hidden'>
             <svg preserveAspectRatio='none' style={{minWidth: '800px'}} width="100%" height="100%" viewBox="0 0 1500 1027" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fillRule="evenodd" clipRule="evenodd" d="M658.796 -841.799C1106.11 -833.899 1324.96 -563.607 1599.93 -370.522C1868.25 -182.094 2239.87 -6.54787 2185.68 230.422C2126.84 487.724 1765.99 699.77 1331.43 803.596C914.686 903.168 427.107 873.163 39.3129 743.244C-307.185 627.161 -435.842 404.243 -512.07 185.989C-583.876 -19.6062 -564.178 -227.506 -361.784 -405.167C-121.503 -616.086 204.58 -849.821 658.796 -841.799Z" fill="url(#paint0_linear_60_66)"/>
                 <path fillRule="evenodd" clipRule="evenodd" d="M1527.28 407.542C1639.89 415.968 1649.67 542.121 1704.29 618.202C1736.24 662.707 1777.46 703.298 1776.07 754.104C1774.7 803.906 1742.44 848.856 1697 884.407C1651.06 920.343 1591.01 936.846 1527.28 948.722C1433.11 966.27 1332.9 1004.84 1248.76 967.933C1151.34 925.198 1069.35 839.55 1083.61 754.104C1097.43 671.281 1235.8 648.402 1312.03 588.851C1389.65 528.223 1417.08 399.296 1527.28 407.542Z" fill="#48A2FE" fillOpacity="0.48"/>
