@@ -9,6 +9,7 @@ import ServicesSection from "@/components/home/ServicesSection";
 import ProjectSection from "@/components/home/ProjectSection";
 import CommentSection from "@/components/home/CommentSection";
 import ContactUsSection from "@/components/home/ContactUsSection";
+import CounterSection from "@/components/CounterSection";
 
 export const revalidate = 60
 
@@ -19,7 +20,7 @@ const Home = async () => {
     return (
       <>
           <Hero/>
-          {/*<CounterSection/>*/}
+          <CounterSection/>
           <ProjectSection projects={projects}/>
           <ServicesSection/>
           <CommentSection comments={comments}/>
