@@ -11,8 +11,8 @@ interface PipeProps {
 const Pipe:FC<PipeProps> = ({classNameContainer, style}) => {
     return <div className={twMerge('h-[250px] flex items-center justify-center w-[]', classNameContainer)} style={style}>
             <div className={'w-full grid h-[60px] items-center'}>
-                <div className='h-[69%] w-full bg-[#617c97] relative border-2 border-[#475b73]'>
-                    <div className='absolute h-[50%] bg-[#4a6278] w-full'/>
+                <div className='h-[69%] w-full bg-[#BEC3C7] relative'>
+                    <div className='absolute h-[50%] bg-[#E3E7E8] w-full'/>
                 </div>
             </div>
         <WheelValveHandle classNameContainer='absolute top-1/2 left-1/2'/>

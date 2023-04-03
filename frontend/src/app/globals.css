@@ -109,7 +109,7 @@ input, textarea{
 .quarter_ring {
     width: 100%;
     height: 100%;
-    background: radial-gradient(ellipse at 100% 100%, transparent 0%, transparent 24%, #617c97 25%, #617c97 42%, #4a6278 43%, #4a6278 62%, transparent 63%, transparent 100%);
+    background: radial-gradient(ellipse at 100% 100%, transparent 0%, transparent 24%, #BEC3C7 25%, #BEC3C7 42%, #E3E7E8 43%, #E3E7E8 62%, transparent 63%, transparent 100%);
 }
 .circle-animation{
     background: url("/g1313.svg");
@@ -231,4 +231,35 @@ input, textarea{
 .slick-disabled{
     opacity: 0.4 !important;
     cursor: default;
+}
+
+.drop{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    box-shadow: inset 10px 10px 10px rgba(0,0,0,0.05),
+    15px 25px 10px rgba(0,0,0,0.1),
+    15px 20px 20px rgba(0,0,0,0.05),
+    inset -10px -10px 15px rgba(255,255,255,0.9);
+    border-radius: 54% 46% 39% 61% / 50% 45% 55% 50% ;
+}
+.drop::before{
+    content: '';
+    position: absolute;
+    top: 35px;
+    left: 25px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+.drop::after{
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 50px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
 }

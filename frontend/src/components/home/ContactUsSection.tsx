@@ -7,32 +7,37 @@ import ContactForm from "@/components/home/ContactForm";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 const ContactUsSection = () => {
-    return <div className='w-full container flex mt-32 sm:mt-52 mb-14 sm:mb-20' id='contact-us'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 shadow-2xl mb-20 rounded-3xl grow'>
+    return <div className='w-full container flex mt-32 sm:mt-44 -mb-14 sm:mb-20' id='contact-us'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 shadow-2xl mb-14 rounded-3xl grow'>
             <div className='flex-col flex pt-8 md:pt-16 md:pl-12 pr-8 md:pr-20 lg:pr-0'>
                 <div className='pl-8'>
-                    <div className='flex flex-row items-center'>
-                        <div className='w-16 h-16'>
-                            <svg fill="#000000" height="100%" width="100%" version="1.1" id="Layer_1"
-                                 xmlns="http://www.w3.org/2000/svg"
-                                 viewBox="0 0 64 64" enableBackground="new 0 0 64 64">
-                                <path id="Mail" d="M58.0034485,8H5.9965506c-3.3136795,0-5.9999995,2.6862001-5.9999995,6v36c0,3.3137016,2.6863203,6,5.9999995,6
-	h52.006897c3.3137016,0,6-2.6862984,6-6V14C64.0034485,10.6862001,61.3171501,8,58.0034485,8z M62.0034485,49.1108017
-	L43.084549,30.1919994l18.9188995-12.0555992V49.1108017z M5.9965506,10h52.006897c2.2056007,0,4,1.7943001,4,4v1.7664003
-	L34.4677505,33.3134003c-1.4902,0.9492989-3.3935013,0.9199982-4.8495998-0.0703011L1.9965508,14.4694996V14
-	C1.9965508,11.7943001,3.7910507,10,5.9965506,10z M1.9965508,16.8852005L21.182251,29.9251003L1.9965508,49.1108017V16.8852005z
-	 M58.0034485,54H5.9965506c-1.6473999,0-3.0638998-1.0021019-3.6760998-2.4278984l20.5199013-20.5200024l5.6547985,3.843401
-	c1.0859013,0.7383003,2.3418007,1.1083984,3.5995998,1.1083984c1.1953011,0,2.3925018-0.3339996,3.4463005-1.0048981
-	l5.8423996-3.7230015l20.2961006,20.2961025C61.0673485,52.9978981,59.6508713,54,58.0034485,54z"/>
-                            </svg>
+                    <h2 className='font-bold text-4xl mt-8 mb-10'><span className='text-custom-blue'>Kontaktirajte</span> nas</h2>
+                    <p className='text-xl font-semibold'>Če imate kakršnakoli vprašanja ali bi radi izvedeli več o naših storitvah, nam lahko pošljete povpraševanje preko obrazca.
+                        <br/><br/>Veselimo se vašega sporočila in vam bomo z veseljem odgovorili v najkrajšem možnem času. Prav tako pa nas lahko kontaktirate preko spodaj napisane telefonske številke ali elektronskega naslova. Že vnaprej se zahvaljujemo za vaše zanimanje!</p>
+                    <div className="flex flex-row justify-between mt-14 mb-0 lg:mb-32">
+                        <div className='flex mb-8'>
+                            <div className="bg-custom-light-blue rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
+                                <svg width="50%" height="50%" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 5.33333C2 4.44928 2.35119 3.60143 2.97631 2.97631C3.60143 2.35119 4.44928 2 5.33333 2H10.8C11.1497 2.00027 11.4904 2.11049 11.7739 2.31508C12.0575 2.51967 12.2695 2.80826 12.38 3.14L14.8767 10.6283C15.0032 11.0089 14.9882 11.4223 14.8345 11.7927C14.6808 12.1632 14.3988 12.4658 14.04 12.645L10.2783 14.5283C12.1222 18.6092 15.3908 21.8778 19.4717 23.7217L21.355 19.96C21.5342 19.6012 21.8368 19.3192 22.2073 19.1655C22.5777 19.0118 22.9911 18.9968 23.3717 19.1233L30.86 21.62C31.192 21.7306 31.4808 21.9429 31.6854 22.2267C31.89 22.5106 32.0001 22.8517 32 23.2017V28.6667C32 29.5507 31.6488 30.3986 31.0237 31.0237C30.3986 31.6488 29.5507 32 28.6667 32H27C13.1933 32 2 20.8067 2 7V5.33333Z" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            </div>
+                            <div className='ml-3 sm:ml-5'>
+                                <h3 className="text-lg font-bold mb-2">Telefon</h3>
+                                <p className='whitespace-nowrap'>040 532 641</p>
+                            </div>
                         </div>
-                        <p className='text-4xl text-gray-200 ml-7'>Kontakt</p>
+                        <div className='flex'>
+                            <div className="bg-custom-light-blue rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
+                                <svg width="50%" height="50%" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 7.14286L15.15 16.16C15.6978 16.5359 16.3415 16.7365 17 16.7365C17.6585 16.7365 18.3022 16.5359 18.85 16.16L32 7.14286M5.33333 26H28.6667C29.5507 26 30.3986 25.6388 31.0237 24.9958C31.6488 24.3528 32 23.4807 32 22.5714V5.42857C32 4.51926 31.6488 3.64719 31.0237 3.00421C30.3986 2.36122 29.5507 2 28.6667 2H5.33333C4.44928 2 3.60143 2.36122 2.97631 3.00421C2.35119 3.64719 2 4.51926 2 5.42857V22.5714C2 23.4807 2.35119 24.3528 2.97631 24.9958C3.60143 25.6388 4.44928 26 5.33333 26Z" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            </div>
+                            <div className='ml-3 sm:ml-5'>
+                                <h3 className="text-lg font-bold mb-2">Email</h3>
+                                <p>ricl@gmail.com</p>
+                            </div>
+                        </div>
                     </div>
-                    <h2 className='font-bold text-4xl mt-8 mb-10'>Pustite nam <span className='text-custom-blue'>sporočilo</span></h2>
-                    <p className='text-xl font-semibold'>in mi vam bomo odgovorili v nakrajšen možnem času.
-                        Potrudili se bomo, da vam takoj podamo relevanten odgovor
-                        na vaše vprašanje zato da čim prej pridete do informacije, ki
-                        jo potrebujete. Z veseljem bom del vašega naslednjega projekta, ki se ga boste lotili.</p>
                 </div>
                 <div className='hidden lg:block relative grow'>
                     <PipeEdge classNameContainer='absolute left-0 bottom-0'/>
@@ -40,7 +45,7 @@ const ContactUsSection = () => {
                     <PipeEdge classNameContainer='absolute -right-[100px] bottom-0 rotate-90'/>
                 </div>
             </div>
-            <div className='pl-8 md:pl-20 pb-20 pt-8 md:pt-24 pr-8 md:pr-20'>
+            <div className='pl-8 md:pl-20 pb-20 pt-8 lg:pt-24 pr-8 md:pr-20'>
                 <GoogleReCaptchaProvider
                     reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
                     scriptProps={{
