@@ -1,5 +1,6 @@
 import React from "react";
 import HeroButton from "@/components/home/HeroButton";
+import useTranslation from 'next-translate/useTranslation'
 
 const Hero = () => {
     return <div className='h-[530px] xs:h-[530px] sm:h-[580px] md:h-[850px]'>

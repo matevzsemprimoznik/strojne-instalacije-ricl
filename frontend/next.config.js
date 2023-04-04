@@ -1,5 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextTranslate = require('next-translate-plugin')
+
+module.exports = nextTranslate({
   images: {
     domains: ['res.cloudinary.com'],
   },
@@ -19,6 +20,4 @@ const nextConfig = {
       }
     ]
   }
-}
-
-module.exports = nextConfig
+})
