@@ -10,7 +10,7 @@ const CounterSection = () => {
             <div className='flex flex-col md:flex-row justify-between items-center w-full'>
                 <div className='text-center md:text-left mb-5 md:mb-0'>
                     <p className='font-bold text-5xl text-myBlue'>
-                        <CountUp enableScrollSpy end={65} />
+                        <CountUp end={65} />
                         <span className='text-black'>+</span>
                     </p>
                     <p className='font-bold text-2xl text-myDarkGrey'>zadovoljnih uporabnikov</p>
@@ -18,7 +18,7 @@ const CounterSection = () => {
                 <div className='border-l-4 hidden md:block border-myLightBlue mx-4 h-24'></div>
                 <div className='text-center md:text-left mb-5 md:mb-0'>
                     <p className='font-bold text-5xl text-myBlue'>
-                        <CountUp enableScrollSpy end={89} />
+                        <CountUp end={89} />
                         <span className='text-black'>+</span>
                     </p>
                     <p className='font-bold text-2xl text-myDarkGrey'>uspešnih projektov</p>
@@ -26,7 +26,7 @@ const CounterSection = () => {
                 <div className='border-l-4 hidden md:block border-myLightBlue h-24 mx-4'></div>
                 <div className='text-center md:text-left mb-5 md:mb-0'>
                     <p className='font-bold text-5xl text-myBlue'>
-                        <CountUp enableScrollSpy end={8} />
+                        <CountUp end={8} />
                         <span className='text-black'>+</span>
                     </p>
                     <p className='font-bold text-2xl text-myDarkGrey'>let izkušenj</p>

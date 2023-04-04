@@ -22,7 +22,7 @@ const Home = async () => {
       <>
           <Nav textColor='text-white'/>
           <Hero/>
-          {/*<CounterSection/>*/}
+          <CounterSection/>
           <ProjectSection projects={projects}/>
           <ServicesSection/>
           <CommentSection comments={comments}/>
