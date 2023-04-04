@@ -10,6 +10,7 @@ import ProjectSection from "@/components/home/ProjectSection";
 import CommentSection from "@/components/home/CommentSection";
 import ContactUsSection from "@/components/home/ContactUsSection";
 import Nav from "@/components/Nav";
+import CounterSection from "@/components/home/CounterSection";
 
 export const revalidate = 60
 

@@ -241,7 +241,11 @@ input, textarea{
     15px 25px 10px rgba(0,0,0,0.1),
     15px 20px 20px rgba(0,0,0,0.05),
     inset -10px -10px 15px rgba(255,255,255,0.9);
-    border-radius: 54% 46% 39% 61% / 50% 45% 55% 50% ;
+    border-radius: 54% 46% 39% 61% / 50% 45% 55% 50%;
+    background-color: #f0f0f0;
+}
+.drop-second{
+    border-radius: 52% 48% 60% 40% / 43% 55% 45% 57% ;
 }
 .drop::before{
     content: '';

@@ -9,7 +9,7 @@ const About = () => {
             <Nav/>
             <WaterDrop classNameContainer='top-36 right-44 opacity-50'/>
             <WaterDrop classNameContainer='top-48 right-10 scale-50 opacity-50'/>
-            <WaterDrop classNameContainer='top-80 right-24 scale-75 opacity-50'/>
+            <WaterDrop classNameContainer='top-80 right-24 scale-75 opacity-50' classNameInnerContainer='drop-second'/>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-5 container mx-auto mb-14 lg:mb-28">
                 <div className="py-4 flex lg:flex-col flex-col-reverse order-2 lg:order-1">
