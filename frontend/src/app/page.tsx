@@ -10,6 +10,7 @@ import ProjectSection from "@/components/home/ProjectSection";
 import CommentSection from "@/components/home/CommentSection";
 import ContactUsSection from "@/components/home/ContactUsSection";
 import Nav from "@/components/Nav";
+import CounterSection from "@/components/CounterSection";
 
 export const revalidate = 60
 
@@ -21,7 +22,7 @@ const Home = async () => {
       <>
           <Nav textColor='text-white'/>
           <Hero/>
-          {/*<CounterSection/>*/}
+          <CounterSection/>
           <ProjectSection projects={projects}/>
           <ServicesSection/>
           <CommentSection comments={comments}/>
