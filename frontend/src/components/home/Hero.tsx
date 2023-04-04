@@ -1,10 +1,10 @@
 import React from "react";
 import HeroButton from "@/components/home/HeroButton";
 
-const Hero = () => {
+const Hero = ({dict}: {dict: any}) => {
     return <div className='h-[530px] xs:h-[530px] sm:h-[580px] md:h-[850px]'>
         <div className='container m-auto py-8 sm:py-28'>
-            <h1 className='text-5xl sm:text-6xl text-white font-bold tracking-wide'>Potrebujete kakovostne <br/> strojne inštalacije?</h1>
+            <h1 className='text-5xl sm:text-6xl text-white font-bold tracking-wide'>{dict.title}</h1>
             <p className='text-white text-2xl mt-10'>Z dolgoletnimi izkušnjami vam nudimo kakovostne in <br/> zanesljive rešitve na področju strojnih inštalacij.</p>
             <HeroButton/>
         </div>
