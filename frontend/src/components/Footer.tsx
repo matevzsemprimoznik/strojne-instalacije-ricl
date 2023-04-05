@@ -3,8 +3,12 @@ import FooterImage from '../assets/footer-image.svg'
 import Image from "next/image";
 import WaterDrop from "@/components/WaterDrop";
 import React from "react";
+import i18nStore from "@/store/i18n.store";
 
 const Footer = () => {
+    const dict = i18nStore.getState().dictionary
+    const locale = i18nStore.getState().locale
+
     return (
         <footer className='flex relative'>
             <div className='absolute w-full h-full -z-10'>
@@ -29,26 +33,33 @@ const Footer = () => {
                     </defs>
                 </svg>
             </div>
-            <div className='flex items-center w-full'>
-                <div className='w-auto sm:w-full h-full py-14 flex flex-col sm:flex-row justify-between container m-auto'>
-                    <div>
-                        <h3 className='text-white text-2xl font-bold mb-4'>PODJETJE</h3>
-                        <p className='text-white text-xl'>DAVORIN RIČL s.p.</p>
-                        <p className='text-white text-xl'>Kremberk 47B, Kremberk</p>
-                        <p className='text-white text-xl'> 2233 SV. ANA</p>
-                        <p className='text-white text-xl'>Slovenija</p>
+            <div className='w-full pt-10 pb-4'>
+                <div className='flex items-center w-full'>
+                    <div className='w-auto sm:w-full h-full flex flex-col sm:flex-row justify-between container m-auto'>
+                        <div>
+                            <h3 className='text-white text-2xl font-bold mb-4'>{dict['footer.title.1']}</h3>
+                            <p className='text-white text-xl'>DAVORIN RIČL s.p.</p>
+                            <p className='text-white text-xl'>Kremberk 47B, Kremberk</p>
+                            <p className='text-white text-xl'> 2233 SV. ANA</p>
+                            <p className='text-white text-xl'>Slovenija</p>
+                        </div>
+                        <div className='my-10 sm:my-0'>
+                            <h3 className='text-white text-2xl font-bold mb-4'>{dict['footer.title.2']}</h3>
+                            <p className='text-white text-xl'>+386 41 508744</p>
+                            <p className='text-white text-xl'>+386 41 508744</p>
+                            <p className='text-white text-xl'>davorinricl@gmail.com</p>
+                        </div>
+                        <div>
+                            <h3 className='text-white text-2xl font-bold mb-4'>{dict['footer.title.3']}</h3>
+                            <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href={dict['link.projects']}>{dict['link.projects']}</Link></p>
+                            <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href={dict['link.about']}>{dict['link.about']}</Link></p>
+                        </div>
                     </div>
-                    <div className='my-10 sm:my-0'>
-                        <h3 className='text-white text-2xl font-bold mb-4'>KONTAKT</h3>
-                        <p className='text-white text-xl'>+386 41 508744</p>
-                        <p className='text-white text-xl'>+386 41 508744</p>
-                        <p className='text-white text-xl'>davorinricl@gmail.com</p>
-                    </div>
-                    <div>
-                        <h3 className='text-white text-2xl font-bold mb-4'>POVEZAVE</h3>
-                        <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href="/projekti">Projekti</Link></p>
-                        <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href="/o-nas">O nas</Link></p>
-                    </div>
+                </div>
+                <div className='flex w-full items-center justify-center mt-4'>
+                    <Link className='text-white' href='/'>Slovensko</Link>
+                    <Link className='text-white mx-5' href='/de'>Deutsch</Link>
+                    <Link className='text-white' href='/hr'>Hrvatsko</Link>
                 </div>
             </div>
 

@@ -1,12 +1,19 @@
-import 'server-only'
 import type { Locale } from './config'
+import {i18n} from "./config";
+import slTranslations from './translations/sl'
+import deTranslations from './translations/de'
+import hrTranslations from './translations/hr'
+import {dictionaryType} from "@/types";
 
-interface Dictionaries {
-    [key: string]: () => Promise<Record<string, string>>
-}
+type Dictionaries = {
+    [key in (typeof i18n['locales'][number])]: dictionaryType;
+};
 
 const dictionaries: Dictionaries = {
-    en: () => import('./translations/en.json').then((module) => module.default),
-    sl: () => import('./translations/sl.json').then((module) => module.default),
+    de: deTranslations,
+    sl: slTranslations,
+    hr: deTranslations,
+} as const
+export const getDictionary = (locale: Locale) => {
+    return dictionaries[locale]
 }
-export const getDictionary = async (locale: Locale) => dictionaries[locale]()

@@ -1,27 +1,19 @@
 'use client'
 import ProjectsCard from "@/components/ProjectsCard";
-import kopalnica from "@/assets/KOPALNICA-1_0.jpg";
 import React, {FC} from "react";
 import {Project} from "@/types";
-import Slider from 'react-slick';
 
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Carousel from "@/components/home/Carousel";
+import i18nStore from "@/store/i18n.store";
 
 interface ProjectSectionProps {
     projects: Project[]
 }
 const ProjectSection:FC<ProjectSectionProps> = ({projects= []}) => {
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-    };
+    const dict = i18nStore.getState().dictionary;
 
     return <div className='relative'>
         <div className='absolute top-64 sm:top-0 right-0 -z-10'>
@@ -30,7 +22,7 @@ const ProjectSection:FC<ProjectSectionProps> = ({projects= []}) => {
             </svg>
         </div>
         <div className='container'>
-            <h2 className='font-bold text-4xl mb-16 '>Naši <span className='text-custom-blue'>projekti</span></h2>
+            <h2 className='font-bold text-4xl mb-16 '>{dict['home.projects.title.1']}<span className='text-custom-blue'>{dict['home.projects.title.2']}</span></h2>
             <div className='max-w-full mb-12' >
                 <Carousel>
                     {projects.map((project, index) => <ProjectsCard key={index} imgSrc={project?.attributes?.images?.data[0]?.attributes?.formats?.medium?.url} title={project.attributes.title}/>)}

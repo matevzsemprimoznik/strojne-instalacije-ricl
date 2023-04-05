@@ -1,9 +1,11 @@
 import React from "react";
 import Nav from "@/components/Nav";
-import WaterDroplets from "@/components/WaterDroplets";
 import WaterDrop from "@/components/WaterDrop";
+import i18nStore from "@/store/i18n.store";
 
 const About = () => {
+    const dict = i18nStore.getState().dictionary
+
     return (
         <div>
             <Nav/>
@@ -33,7 +35,7 @@ const About = () => {
                                     </svg>
                                 </div>
                                 <div className='ml-3 sm:ml-5'>
-                                    <h3 className="text-lg font-bold mb-2">Telefon</h3>
+                                    <h3 className="text-lg font-bold mb-2">{dict['phone']}</h3>
                                     <p className='whitespace-nowrap'>040 532 641</p>
                                 </div>
                             </div>
@@ -44,7 +46,7 @@ const About = () => {
                                     </svg>
                                 </div>
                                 <div className='ml-3 sm:ml-5'>
-                                    <h3 className="text-lg font-bold mb-2">Email</h3>
+                                    <h3 className="text-lg font-bold mb-2">{dict['email']}</h3>
                                     <p>ricl@gmail.com</p>
                                 </div>
                             </div>
@@ -53,15 +55,9 @@ const About = () => {
 
                 </div>
                 <div className="flex flex-col pb-5 pt-10 order-1 lg:order-2">
-                    <h1 className='font-bold text-4xl mb-8'>Naše <span className='text-custom-blue'>poslanstvo</span></h1>
-                    <p className="text-lg mb-4 font-semibold">
-                        Podjetje, ki se ukvarja s strojnimi inštalacijami, je družinsko podjetje, ki ga sestavljata oče in sin. S svojim znanjem in izkušnjami na področju strojnih inštalacij, kot so ogrevanje, vodovod in klimatizacija, sta že vrsto let zadovoljna svoja stranke.
-
-                    </p>
-                    <p className="text-lg font-semibold">
-                        Njihovo poslanstvo je zagotoviti kakovostne in učinkovite rešitve za svoje stranke, ki jim bodo zagotovile ugodno bivanjsko okolje in prihranek pri stroških. S strankami komunicirata odkrito in jih vedno poslušata ter svetujeta, da lahko skupaj najdejo najboljšo rešitev za njihove potrebe.
-
-                    </p>
+                    <h1 className='font-bold text-4xl mb-8'>{dict['about.title.1']}<span className='text-custom-blue'>{dict['about.title.2']}</span></h1>
+                    <p className="text-lg mb-4 font-semibold">{dict['about.description.1']}</p>
+                    <p className="text-lg font-semibold">{dict['about.description.2']}</p>
                 </div>
             </div>
         </div>

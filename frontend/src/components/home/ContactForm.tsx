@@ -3,8 +3,10 @@ import React, {FormEvent, useCallback, useState} from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import sendMessage from "@/lib/contact";
 import {AxiosResponse} from "axios";
+import i18nStore from "@/store/i18n.store";
 
 const ContactForm = () => {
+    const dict = i18nStore.getState().dictionary;
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
@@ -40,19 +42,19 @@ const ContactForm = () => {
 
     return <form>
         <div className='flex flex-col'>
-            <label htmlFor='email' className='font-bold'>Elektronski naslov</label>
+            <label htmlFor='email' className='font-bold'>{dict['contact.form.email']}</label>
             <input type='email' id='email' className='rounded-lg bg-custom-light-blue p-4 mt-3'
-                   placeholder='Vaš elektronski naslov' onChange={e => setEmail(e.target.value)}/>
+                   placeholder={dict['contact.form.email.placeholder']} onChange={e => setEmail(e.target.value)}/>
         </div>
         <div className='flex flex-col mt-7'>
-            <label htmlFor='subject' className='font-bold'>Zadeva</label>
+            <label htmlFor='subject' className='font-bold'>{dict['contact.form.subject']}</label>
             <input type='subject' id='subject' className='rounded-lg bg-custom-light-blue p-4 mt-3'
-                   placeholder='Katero področje vas zanima' onChange={e => setSubject(e.target.value)}/>
+                   placeholder={dict['contact.form.subject.placeholder']} onChange={e => setSubject(e.target.value)}/>
         </div>
         <div className='flex flex-col mt-7'>
-            <label htmlFor='message' className='font-bold'>Sporočilo</label>
+            <label htmlFor='message' className='font-bold'>{dict['contact.form.message']}</label>
             <textarea rows={4} className='resize-none rounded-lg bg-custom-light-blue p-4 mt-3'
-                      placeholder='Vaše sporočilo' onChange={e => setMessage(e.target.value)}/>
+                      placeholder={dict['contact.form.message.placeholder']} onChange={e => setMessage(e.target.value)}/>
         </div>
 
         <div className='flex justify-between items-center flex-row mt-10'>
@@ -60,7 +62,7 @@ const ContactForm = () => {
             {response && <p className='text-custom-blue font-bold mr-4'>{response}</p>}
             {error && <p className='text-yellow-500 font-bold mr-4'>{error}</p>}
             <button type='submit' onClick={handleSubmit} className='w-[150px] min-w-[150px] h-[50px] bg-custom-blue text-white text-lg font-bold flex items-center justify-center rounded-xl'>
-                {!loading ? 'Pošlji' : <div className="lds-ring"><div></div><div></div><div></div><div></div></div>}
+                {!loading ? dict['contact.form.button'] : <div className="lds-ring"><div></div><div></div><div></div><div></div></div>}
             </button>
         </div>
     </form>

@@ -5,15 +5,17 @@ import PipeEdge from "@/components/PipeEdge";
 import WheelValveHandle from "@/components/WheelValveHandle";
 import ContactForm from "@/components/home/ContactForm";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import i18nStore from "@/store/i18n.store";
 
 const ContactUsSection = () => {
+    const dict = i18nStore.getState().dictionary
+
     return <div className='w-full container flex mt-32 sm:mt-44 -mb-14 sm:mb-20' id='contact-us'>
         <div className='grid grid-cols-1 lg:grid-cols-2 shadow-2xl mb-14 rounded-3xl grow'>
             <div className='flex-col flex pt-8 md:pt-16 md:pl-12 pr-8 md:pr-20 lg:pr-0'>
                 <div className='pl-8'>
-                    <h2 className='font-bold text-4xl mt-8 mb-10'><span className='text-custom-blue'>Kontaktirajte</span> nas</h2>
-                    <p className='text-xl font-semibold'>Če imate kakršnakoli vprašanja ali bi radi izvedeli več o naših storitvah, nam lahko pošljete povpraševanje preko obrazca.
-                        <br/><br/>Veselimo se vašega sporočila in vam bomo z veseljem odgovorili v najkrajšem možnem času. Prav tako pa nas lahko kontaktirate preko spodaj napisane telefonske številke ali elektronskega naslova. Že vnaprej se zahvaljujemo za vaše zanimanje!</p>
+                    <h2 className='font-bold text-4xl mt-8 mb-10'><span className='text-custom-blue'>{dict['contact.title.1']}</span>{dict['contact.title.2']}</h2>
+                    <p className='text-xl font-semibold'>{dict['contact.subtitle.1']}<br/><br/>{dict['contact.subtitle.2']}</p>
                     <div className="flex flex-row justify-between mt-14 mb-0 lg:mb-32">
                         <div className='flex mb-8'>
                             <div className="bg-custom-light-blue rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
@@ -22,7 +24,7 @@ const ContactUsSection = () => {
                                 </svg>
                             </div>
                             <div className='ml-3 sm:ml-5'>
-                                <h3 className="text-lg font-bold mb-2">Telefon</h3>
+                                <h3 className="text-lg font-bold mb-2">{dict['phone']}</h3>
                                 <p className='whitespace-nowrap'>040 532 641</p>
                             </div>
                         </div>
@@ -33,7 +35,7 @@ const ContactUsSection = () => {
                                 </svg>
                             </div>
                             <div className='ml-3 sm:ml-5'>
-                                <h3 className="text-lg font-bold mb-2">Email</h3>
+                                <h3 className="text-lg font-bold mb-2">{dict['email']}</h3>
                                 <p>ricl@gmail.com</p>
                             </div>
                         </div>

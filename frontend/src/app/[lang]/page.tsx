@@ -16,16 +16,15 @@ import {getDictionary} from "@/i18n/get-dictionary";
 
 export const revalidate = 60
 
-const Home = async ({params: {lang}}: {params: {lang: Locale}}) => {
+const Home = async () => {
     const projects = await getProjects()
     const comments = await getComments()
 
-    const dictionary = await getDictionary(lang)
 
     return (
       <>
           <Nav textColor='text-white'/>
-          <Hero dict={dictionary}/>
+          <Hero/>
           <CounterSection/>
           <ProjectSection projects={projects}/>
           <ServicesSection/>
@@ -35,10 +34,3 @@ const Home = async ({params: {lang}}: {params: {lang: Locale}}) => {
   )
 }
 export default Home
-
-export function generateStaticParams() {
-    return [
-        {lang: 'en'},
-        {lang: 'sl'}
-    ]
-}
