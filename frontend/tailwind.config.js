@@ -27,6 +27,7 @@ module.exports = {
         myBlue: '#00A3FF',
         "custom-blue": "#1188ff",
         "custom-light-blue": "#DEF3FF",
+        'custom-light-blue-shadow': "rgba(0,163,255,0.25)",
         myGrey: '#F2F2F2',
         myDarkGrey: '#CCCCCC',
         myLightBlue: '#F5FBFF'

@@ -1,10 +1,14 @@
 "use client"
 
-import React from "react";
+import React, {FC} from "react";
 import CountUp from 'react-countup';
+import {Counter} from "@/types";
 
+interface CounterSectionProps {
+    counter: Counter
+}
 
-const CounterSection = () => {
+const CounterSection:FC<CounterSectionProps> = ({ counter}) => {
     return (
         <>
             <div className='flex items-center w-full flex-col'>
@@ -15,7 +19,7 @@ const CounterSection = () => {
                 <div className='flex flex-col md:flex-row justify-between items-center w-full'>
                     <div className='text-center md:text-left mb-5 md:mb-0'>
                         <p className='font-bold text-5xl text-myBlue'>
-                            <CountUp enableScrollSpy end={65} />
+                            <CountUp enableScrollSpy end={counter.attributes.uporabniki} />
                             <span className='text-black'>+</span>
                         </p>
                         <p className='font-bold text-2xl text-myDarkGrey'>zadovoljnih uporabnikov</p>
@@ -23,7 +27,7 @@ const CounterSection = () => {
                     <div className='border-l-4 hidden md:block border-myLightBlue mx-4 h-24'></div>
                     <div className='text-center md:text-left mb-5 md:mb-0'>
                         <p className='font-bold text-5xl text-myBlue'>
-                            <CountUp enableScrollSpy end={89} />
+                            <CountUp enableScrollSpy end={counter.attributes.projekti} />
                             <span className='text-black'>+</span>
                         </p>
                         <p className='font-bold text-2xl text-myDarkGrey'>uspešnih projektov</p>
@@ -31,7 +35,7 @@ const CounterSection = () => {
                     <div className='border-l-4 hidden md:block border-myLightBlue h-24 mx-4'></div>
                     <div className='text-center md:text-left mb-5 md:mb-0'>
                         <p className='font-bold text-5xl text-myBlue'>
-                            <CountUp enableScrollSpy end={8} />
+                            <CountUp enableScrollSpy end={counter.attributes.leta_izkusenj} />
                             <span className='text-black'>+</span>
                         </p>
                         <p className='font-bold text-2xl text-myDarkGrey'>let izkušenj</p>

@@ -11,18 +11,20 @@ import CommentSection from "@/components/home/CommentSection";
 import ContactUsSection from "@/components/home/ContactUsSection";
 import Nav from "@/components/Nav";
 import CounterSection from "@/components/home/CounterSection";
+import getCounter from "@/lib/getCounter";
 
 export const revalidate = 60
 
 const Home = async () => {
     const projects = await getProjects()
     const comments = await getComments()
+    const counter = await getCounter()
 
     return (
       <>
           <Nav textColor='text-white'/>
           <Hero/>
-          <CounterSection/>
+          <CounterSection counter={counter}/>
           <ProjectSection projects={projects}/>
           <ServicesSection/>
           <CommentSection comments={comments}/>

@@ -2,13 +2,12 @@
 import React from "react";
 import Pipe from "@/components/Pipe";
 import PipeEdge from "@/components/PipeEdge";
-import WheelValveHandle from "@/components/WheelValveHandle";
 import ContactForm from "@/components/home/ContactForm";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 const ContactUsSection = () => {
     return <div className='w-full container flex mt-32 sm:mt-44 -mb-14 sm:mb-20' id='contact-us'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 shadow-2xl mb-14 rounded-3xl grow'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 shadow-2xl mb-14 rounded-3xl grow bg-white'>
             <div className='flex-col flex pt-8 md:pt-16 md:pl-12 pr-8 md:pr-20 lg:pr-0'>
                 <div className='pl-8'>
                     <h2 className='font-bold text-4xl mt-8 mb-10'><span className='text-custom-blue'>Kontaktirajte</span> nas</h2>
