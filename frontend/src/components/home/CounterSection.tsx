@@ -19,7 +19,7 @@ const CounterSection:FC<CounterSectionProps> = ({ counter}) => {
                 <div className='flex flex-col md:flex-row justify-between items-center w-full'>
                     <div className='text-center md:text-left mb-5 md:mb-0'>
                         <p className='font-bold text-5xl text-myBlue'>
-                            <CountUp enableScrollSpy end={counter.attributes.uporabniki} />
+                            <CountUp enableScrollSpy end={counter.attributes.stranke} />
                             <span className='text-black'>+</span>
                         </p>
                         <p className='font-bold text-2xl text-myDarkGrey'>zadovoljnih uporabnikov</p>

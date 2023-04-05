@@ -1,13 +1,18 @@
 'use client'
-import React from "react";
+import React, {FC} from "react";
 import Pipe from "@/components/Pipe";
 import PipeEdge from "@/components/PipeEdge";
 import ContactForm from "@/components/home/ContactForm";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import {Contact} from "@/types";
 
-const ContactUsSection = () => {
+interface ContactUsSectionProps {
+    contact: Contact
+}
+
+const ContactUsSection:FC<ContactUsSectionProps> = ({ contact}) => {
     return <div className='w-full container flex mt-32 sm:mt-44 -mb-14 sm:mb-20' id='contact-us'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 shadow-2xl mb-14 rounded-3xl grow bg-white'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 shadow-lg shadow-custom-light-blue-shadow mb-14 rounded-3xl grow bg-white'>
             <div className='flex-col flex pt-8 md:pt-16 md:pl-12 pr-8 md:pr-20 lg:pr-0'>
                 <div className='pl-8'>
                     <h2 className='font-bold text-4xl mt-8 mb-10'><span className='text-custom-blue'>Kontaktirajte</span> nas</h2>
@@ -22,7 +27,7 @@ const ContactUsSection = () => {
                             </div>
                             <div className='ml-3 sm:ml-5'>
                                 <h3 className="text-lg font-bold mb-2">Telefon</h3>
-                                <p className='whitespace-nowrap'>040 532 641</p>
+                                <p className='whitespace-nowrap'>{contact.attributes.telefon}</p>
                             </div>
                         </div>
                         <div className='flex'>
@@ -33,7 +38,7 @@ const ContactUsSection = () => {
                             </div>
                             <div className='ml-3 sm:ml-5'>
                                 <h3 className="text-lg font-bold mb-2">Email</h3>
-                                <p>ricl@gmail.com</p>
+                                <p>{contact.attributes.mail}</p>
                             </div>
                         </div>
                     </div>

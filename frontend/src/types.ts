@@ -33,9 +33,16 @@ export interface Comment {
 
 export interface Counter {
     attributes: {
-        uporabniki: number;
+        stranke: number;
         projekti: number;
         leta_izkusenj: number;
+    }
+}
+
+export interface Contact {
+    attributes: {
+        telefon: string;
+        mail: string;
     }
 }
 

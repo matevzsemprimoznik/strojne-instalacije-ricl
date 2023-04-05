@@ -12,6 +12,7 @@ import ContactUsSection from "@/components/home/ContactUsSection";
 import Nav from "@/components/Nav";
 import CounterSection from "@/components/home/CounterSection";
 import getCounter from "@/lib/getCounter";
+import getContact from "@/lib/getContact";
 
 export const revalidate = 60
 
@@ -19,6 +20,7 @@ const Home = async () => {
     const projects = await getProjects()
     const comments = await getComments()
     const counter = await getCounter()
+    const contact = await getContact()
 
     return (
       <>
@@ -28,7 +30,7 @@ const Home = async () => {
           <ProjectSection projects={projects}/>
           <ServicesSection/>
           <CommentSection comments={comments}/>
-          <ContactUsSection/>
+          <ContactUsSection contact={contact}/>
       </>
   )
 }
