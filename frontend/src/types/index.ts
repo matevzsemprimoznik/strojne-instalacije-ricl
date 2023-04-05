@@ -34,6 +34,21 @@ export interface Comment {
     }
 }
 
+export interface Counter {
+    attributes: {
+        stranke: number;
+        projekti: number;
+        leta_izkusenj: number;
+    }
+}
+
+export interface Contact {
+    attributes: {
+        telefon: string;
+        mail: string;
+    }
+}
+
 export interface ContactMessage {
     token: string;
     email: string;

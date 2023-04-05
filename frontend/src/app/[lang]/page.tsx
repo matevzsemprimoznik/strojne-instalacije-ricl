@@ -12,8 +12,9 @@ import ContactUsSection from "@/components/home/ContactUsSection";
 import Nav from "@/components/Nav";
 import CounterSection from "@/components/home/CounterSection";
 import {Locale} from "@/i18n/config";
-import {getDictionary} from "@/i18n/get-dictionary";
 import i18nStore from "@/store/i18n.store";
+import getCounter from "@/lib/getCounter";
+import getContact from "@/lib/getContact";
 
 export const revalidate = 60
 
@@ -25,17 +26,19 @@ interface HomeProps {
 const Home = async ({params: {lang}}: HomeProps) => {
     const projects = await getProjects(lang)
     const comments = await getComments(lang)
+    const counter = await getCounter()
+    const contact = await getContact()
     const dict = i18nStore.getState().dictionary
 
     return (
       <>
           <Nav textColor='text-white'/>
           <Hero/>
-          <CounterSection dict={dict}/>
+          <CounterSection dict={dict} counter={counter}/>
           <ProjectSection projects={projects}/>
           <ServicesSection/>
           <CommentSection comments={comments}/>
-          <ContactUsSection dict={dict}/>
+          <ContactUsSection dict={dict} contact={contact}/>
       </>
   )
 }

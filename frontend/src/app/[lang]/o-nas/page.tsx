@@ -1,9 +1,12 @@
 import React from "react";
 import Nav from "@/components/Nav";
+import WaterDroplets from "@/components/WaterDroplets";
 import WaterDrop from "@/components/WaterDrop";
 import i18nStore from "@/store/i18n.store";
+import getContact from "@/lib/getContact";
 
-const About = () => {
+const About = async () => {
+    const contact = await getContact()
     const dict = i18nStore.getState().dictionary
 
     return (
@@ -36,7 +39,7 @@ const About = () => {
                                 </div>
                                 <div className='ml-3 sm:ml-5'>
                                     <h3 className="text-lg font-bold mb-2">{dict['phone']}</h3>
-                                    <p className='whitespace-nowrap'>040 532 641</p>
+                                    <p className='whitespace-nowrap'>{contact.attributes.telefon}</p>
                                 </div>
                             </div>
                             <div className='flex'>
@@ -47,7 +50,7 @@ const About = () => {
                                 </div>
                                 <div className='ml-3 sm:ml-5'>
                                     <h3 className="text-lg font-bold mb-2">{dict['email']}</h3>
-                                    <p>ricl@gmail.com</p>
+                                    <p>{contact.attributes.mail}</p>
                                 </div>
                             </div>
                         </div>
