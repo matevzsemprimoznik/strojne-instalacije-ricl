@@ -4,8 +4,8 @@ const translations = {
     "phone": "Telefon",
     "email": "E-Mail",
 
-    "link.projects": "Projekti",
-    "link.about": "O nas",
+    "link.projects": "Projekte",
+    "link.about": "Über uns",
 
     "hero.title.1": "Benötigen Sie hochwertige",
     "hero.title.2": "Hardwareinstallationen?",

@@ -63,9 +63,12 @@ input, textarea{
 }
 
 .arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    padding: 3px;
+    border: solid black !important;
+    border-width: 0 3px 3px 0 !important;
+    padding: 3px !important;
+}
+.slick-prev:before, .slick-next:before{
+    content: '' !important;
 }
 
 .grecaptcha-badge{

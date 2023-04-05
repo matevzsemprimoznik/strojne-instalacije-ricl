@@ -17,9 +17,14 @@ import i18nStore from "@/store/i18n.store";
 
 export const revalidate = 60
 
-const Home = async () => {
-    const projects = await getProjects()
-    const comments = await getComments()
+interface HomeProps {
+    params: {
+        lang: Locale
+    }
+}
+const Home = async ({params: {lang}}: HomeProps) => {
+    const projects = await getProjects(lang)
+    const comments = await getComments(lang)
     const dict = i18nStore.getState().dictionary
 
     return (
