@@ -55,7 +55,7 @@ const translations = {
     //about page
     "about.title.1": "Naše ",
     "about.title.2": "poslanstvo",
-    "about.description.1": "Podjetje, ki se ukvarja s strojnimi inštalacijami, je družinsko podjetje, ki ga sestavljata oče in sin. S svojim znanjem in izkušnjami na področju strojnih inštalacij, kot so ogrevanje, vodovod in klimatizacija, sta že vrsto let zadovoljna svoja stranke.",
-    "about.description.2": "Njihovo poslanstvo je zagotoviti kakovostne in učinkovite rešitve za svoje stranke, ki jim bodo zagotovile ugodno bivanjsko okolje in prihranek pri stroških. S strankami komunicirata odkrito in jih vedno poslušata ter svetujeta, da lahko skupaj najdejo najboljšo rešitev za njihove potrebe.",
+    "about.description.1": "Smo družinsko podjetje, ki se ukvarja s strojnimi inštalacijami, ki ga sestavljava oče in sin. S svojim znanjem in izkušnjami na področju strojnih inštalacij, kot so ogrevanje, vodovod in klimatizacija, že vrsto let zadovoljujeta svoja stranke.",
+    "about.description.2": "Naše poslanstvo je zagotoviti kakovostne in učinkovite rešitve za svoje stranke, ki jim bodo zagotovile ugodno bivanjsko okolje in prihranek pri stroških. Z vami bomo komunicirali odkrito in vas vedno poslušali ter vam svetovali, da lahko skupaj najdemo najboljšo rešitev za vaše potrebe.",
 }
 export default translations

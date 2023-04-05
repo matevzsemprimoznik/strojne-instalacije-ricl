@@ -1,12 +1,15 @@
 'use client'
-import React, {FormEvent, useCallback, useState} from "react";
+import React, {FC, FormEvent, useCallback, useState} from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import sendMessage from "@/lib/contact";
 import {AxiosResponse} from "axios";
 import i18nStore from "@/store/i18n.store";
+import {dictionaryType} from "@/types";
 
-const ContactForm = () => {
-    const dict = i18nStore.getState().dictionary;
+interface ContactFormProps {
+    dict: dictionaryType
+}
+const ContactForm:FC<ContactFormProps> = ({dict}) => {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');

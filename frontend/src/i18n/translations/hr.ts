@@ -2,52 +2,52 @@ import {dictionaryType} from "@/types";
 
 const translations = {
     "phone": "Telefon",
-    "email": "El. naslov",
+    "email": "E. adresa",
 
     "link.projects": "Projekti",
-    "link.about": "O nas",
+    "link.about": "O nama",
 
-    "hero.title.1": "Potrebujete kakovostne",
-    "hero.title.2": "strojne inštalacije?",
-    "hero.subtitle.1": "Z dolgoletnimi izkušnjami vam nudimo kakovostne in",
-    "hero.subtitle.2": "zanesljive rešitve na področju strojnih inštalacij.",
+    "hero.title.1": "Trebate kvalitetne",
+    "hero.title.2": "vodoinstalaterske usluge?",
+    "hero.subtitle.1": "Dugogodišnjim iskustvom nudimo Vam kvalitetna",
+    "hero.subtitle.2": "i pouzdana rješenja na području strojnih instalacija.",
     "hero.button": "Kontaktirajte nas",
 
-    "counter.display.1": "zadovoljnih strank",
-    "counter.display.2": "uspešnih projektov",
-    "counter.display.3": "let izkušenj",
+    "counter.display.1": "zadovoljnih klijenata",
+    "counter.display.2": "uspješnih projekata",
+    "counter.display.3": "godina iskustva",
 
     "home.projects.title.1": "Naši",
     "home.projects.title.2": " projekti",
 
-    "services.subtitle": "Naše storitve",
-    "services.title.1": "Nudimo različne vrste ",
-    "services.title.2": "storitev za vas",
-    "services.card.1": "Toplotne črpalke",
-    "services.card.2": "Klimatske naprave",
-    "services.card.3": "Kopalnice",
-    "services.card.4": "Polaganje cevi",
-    "services.card.5": "Talno gretje",
-    "services.card.6": "Toplotne črpalke",
+    "services.subtitle": "Naše usluge",
+    "services.title.1": "Za vas pružamo ",
+    "services.title.2": "razne vrste usluga",
+    "services.card.1": "Dizalice topline",
+    "services.card.2": "Klima uređaji",
+    "services.card.3": "Kupaonice",
+    "services.card.4": "Polaganje cijevi",
+    "services.card.5": "Podno grijanje",
+    "services.card.6": "Dizalice topline",
 
-    "comments.title.1": "Mnenja ",
-    "comments.title.2": "strank",
+    "comments.title.1": "Recenzije ",
+    "comments.title.2": "kupaca",
 
     "contact.title.1": "Kontaktirajte ",
     "contact.title.2": "nas",
-    "contact.subtitle.1": "Če imate kakršnakoli vprašanja ali bi radi izvedeli več o naših storitvah, nam lahko pošljete povpraševanje preko obrazca.",
-    "contact.subtitle.2": "Veselimo se vašega sporočila in vam bomo z veseljem odgovorili v najkrajšem možnem času. Prav tako pa nas lahko kontaktirate preko spodaj napisane telefonske številke ali elektronskega naslova. Že vnaprej se zahvaljujemo za vaše zanimanje!",
-    "contact.form.email": "Elektronski naslov",
-    "contact.form.email.placeholder": "Vaš elektronski naslov",
-    "contact.form.subject": "Zadeva",
-    "contact.form.subject.placeholder": "Katero področje vas zanima?",
-    "contact.form.message": "Sporočilo",
-    "contact.form.message.placeholder": "Vaše sporočilo",
-    "contact.form.button": "Pošlji",
+    "contact.subtitle.1": "Ukoliko imate pitanja ili želite saznati više o našim uslugama, možete nam poslati upit putem obrasca.",
+    "contact.subtitle.2": "Radujemo se vašem odgovoru i rado ćemo odgovoriti što je prije moguće. Također nas možete kontaktirati putem dolje navedenog broja telefona ili e-mail adrese. Unaprijed zahvaljujemo na interesu!",
+    "contact.form.email": "Elektronska adresa",
+    "contact.form.email.placeholder": "Vaša email adresa",
+    "contact.form.subject": "Stvar",
+    "contact.form.subject.placeholder": "Koje područje vas zanima?",
+    "contact.form.message": "Poruka",
+    "contact.form.message.placeholder": "Vaša poruka",
+    "contact.form.button": "Pošalji",
 
-    "footer.title.1": "Podjetje",
+    "footer.title.1": "Kompanija",
     "footer.title.2": "Kontakt",
-    "footer.title.3": "Povezave",
+    "footer.title.3": "Linkovi",
 
 
     // projects page
@@ -55,9 +55,9 @@ const translations = {
     "projects.title.2": " projekti",
 
     //about page
-    "about.title.1": "Naše ",
-    "about.title.2": "poslanstvo",
-    "about.description.1": "Podjetje, ki se ukvarja s strojnimi inštalacijami, je družinsko podjetje, ki ga sestavljata oče in sin. S svojim znanjem in izkušnjami na področju strojnih inštalacij, kot so ogrevanje, vodovod in klimatizacija, sta že vrsto let zadovoljna svoja stranke.",
-    "about.description.2": "Njihovo poslanstvo je zagotoviti kakovostne in učinkovite rešitve za svoje stranke, ki jim bodo zagotovile ugodno bivanjsko okolje in prihranek pri stroških. S strankami komunicirata odkrito in jih vedno poslušata ter svetujeta, da lahko skupaj najdejo najboljšo rešitev za njihove potrebe.",
+    "about.title.1": "Naša ",
+    "about.title.2": "misija",
+    "about.description.1": "Mi smo obiteljska tvrtka koja se bavi hardverskim instalacijama koju čine otac i sin. Svojim znanjem i iskustvom na području strojarskih instalacija kao što su grijanje, vodovod i klimatizacija već dugi niz godina zadovoljavaju svoje kupce.",
+    "about.description.2": "Naša misija je ponuditi kvalitetna i učinkovita rješenja za naše kupce, koja će im omogućiti ugodno životno okruženje i uštedu troškova. S Vama ćemo otvoreno komunicirati i uvijek Vas saslušati i savjetovati kako bismo zajedno pronašli najbolje rješenje za Vaše potrebe.",
 }
 export default translations

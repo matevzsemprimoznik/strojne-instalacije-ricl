@@ -1,15 +1,17 @@
 'use client'
-import React from "react";
+import React, {FC} from "react";
 import Pipe from "@/components/Pipe";
 import PipeEdge from "@/components/PipeEdge";
 import WheelValveHandle from "@/components/WheelValveHandle";
 import ContactForm from "@/components/home/ContactForm";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import i18nStore from "@/store/i18n.store";
+import {dictionaryType} from "@/types";
 
-const ContactUsSection = () => {
-    const dict = i18nStore.getState().dictionary
-
+interface ContactUsSectionProps {
+    dict: dictionaryType
+}
+const ContactUsSection:FC<ContactUsSectionProps> = ({dict}) => {
     return <div className='w-full container flex mt-32 sm:mt-44 -mb-14 sm:mb-20' id='contact-us'>
         <div className='grid grid-cols-1 lg:grid-cols-2 shadow-2xl mb-14 rounded-3xl grow'>
             <div className='flex-col flex pt-8 md:pt-16 md:pl-12 pr-8 md:pr-20 lg:pr-0'>
@@ -57,7 +59,7 @@ const ContactUsSection = () => {
                         nonce: undefined,
                     }}
                 >
-                <ContactForm/>
+                <ContactForm dict={dict}/>
                 </GoogleReCaptchaProvider>
             </div>
             <div className='lg:hidden relative h-24 scale-75 sm:scale-100 origin-[0_bottom] w-[133%] sm:w-full'>

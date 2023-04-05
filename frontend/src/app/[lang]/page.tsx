@@ -13,23 +13,24 @@ import Nav from "@/components/Nav";
 import CounterSection from "@/components/home/CounterSection";
 import {Locale} from "@/i18n/config";
 import {getDictionary} from "@/i18n/get-dictionary";
+import i18nStore from "@/store/i18n.store";
 
 export const revalidate = 60
 
 const Home = async () => {
     const projects = await getProjects()
     const comments = await getComments()
-
+    const dict = i18nStore.getState().dictionary
 
     return (
       <>
           <Nav textColor='text-white'/>
           <Hero/>
-          <CounterSection/>
+          <CounterSection dict={dict}/>
           <ProjectSection projects={projects}/>
           <ServicesSection/>
           <CommentSection comments={comments}/>
-          <ContactUsSection/>
+          <ContactUsSection dict={dict}/>
       </>
   )
 }

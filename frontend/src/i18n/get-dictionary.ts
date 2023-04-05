@@ -12,7 +12,7 @@ type Dictionaries = {
 const dictionaries: Dictionaries = {
     de: deTranslations,
     sl: slTranslations,
-    hr: deTranslations,
+    hr: hrTranslations,
 } as const
 export const getDictionary = (locale: Locale) => {
     return dictionaries[locale]

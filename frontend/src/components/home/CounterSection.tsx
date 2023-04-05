@@ -1,12 +1,13 @@
 "use client"
 
-import React from "react";
+import React, {FC} from "react";
 import CountUp from 'react-countup';
-import i18nStore from "@/store/i18n.store";
+import {dictionaryType} from "@/types";
 
-
-const CounterSection = () => {
-    const dict = i18nStore.getState().dictionary;
+interface CounterSectionProps {
+    dict: dictionaryType
+}
+const CounterSection:FC<CounterSectionProps> = ({dict}) => {
     return (
         <div className='flex flex-col justify-center items-center -mt-12 my-16 px-6 md:px-0 md:mx-auto md:w-2/3 lg:w-1/2'>
             <div className='flex flex-col md:flex-row justify-between items-center w-full'>
