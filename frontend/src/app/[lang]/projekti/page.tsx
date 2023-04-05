@@ -3,9 +3,15 @@ import React from "react";
 import getProjects from "@/lib/getProjects";
 import Nav from "@/components/Nav";
 import i18nStore from "@/store/i18n.store";
+import {Locale} from "@/i18n/config";
 
-const Projects = async () => {
-    const projects = await getProjects()
+interface ProjectsProps {
+    params: {
+        lang: Locale
+    }
+}
+const Projects = async ({params: {lang}}: ProjectsProps) => {
+    const projects = await getProjects(lang)
     const dict = i18nStore.getState().dictionary
 
     return (

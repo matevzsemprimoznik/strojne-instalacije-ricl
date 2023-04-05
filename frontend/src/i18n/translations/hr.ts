@@ -1,6 +1,6 @@
 import {dictionaryType} from "@/types";
 
-const translations = {
+const translations: dictionaryType = {
     "phone": "Telefon",
     "email": "E. adresa",
 
@@ -13,6 +13,9 @@ const translations = {
     "hero.subtitle.2": "i pouzdana rješenja na području strojnih instalacija.",
     "hero.button": "Kontaktirajte nas",
 
+    "counter.subtitle": "Naš posao",
+    "counter.title.1": "Kvalitetan rad ",
+    "counter.title.2": "nam je donio",
     "counter.display.1": "zadovoljnih klijenata",
     "counter.display.2": "uspješnih projekata",
     "counter.display.3": "godina iskustva",

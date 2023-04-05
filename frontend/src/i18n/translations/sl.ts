@@ -11,6 +11,9 @@ const translations = {
     "hero.subtitle.2": "zanesljive rešitve na področju strojnih inštalacij.",
     "hero.button": "Kontaktirajte nas",
 
+    "counter.subtitle": "Naše delo",
+    "counter.title.1": "Kakovostno delo nam ",
+    "counter.title.2": "je prineslo",
     "counter.display.1": "zadovoljnih strank",
     "counter.display.2": "uspešnih projektov",
     "counter.display.3": "let izkušenj",
