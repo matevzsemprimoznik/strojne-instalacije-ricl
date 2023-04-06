@@ -1,19 +1,18 @@
 'use client'
 import ProjectsCard from "@/components/ProjectsCard";
 import React, {FC} from "react";
-import {Project} from "@/types";
+import {dictionaryType, Project} from "@/types";
 
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Carousel from "@/components/home/Carousel";
-import i18nStore from "@/store/i18n.store";
 
 interface ProjectSectionProps {
     projects: Project[]
+    dict: dictionaryType
 }
-const ProjectSection:FC<ProjectSectionProps> = ({projects= []}) => {
-    const dict = i18nStore.getState().dictionary;
+const ProjectSection:FC<ProjectSectionProps> = ({projects= [], dict}) => {
 
     return <div className='relative'>
         <div className='absolute top-64 sm:top-0 right-0 -z-10'>

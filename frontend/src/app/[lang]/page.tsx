@@ -35,7 +35,7 @@ const Home = async ({params: {lang}}: HomeProps) => {
           <Nav textColor='text-white'/>
           <Hero/>
           <CounterSection dict={dict} counter={counter}/>
-          <ProjectSection projects={projects}/>
+          <ProjectSection projects={projects} dict={dict}/>
           <ServicesSection/>
           <CommentSection comments={comments}/>
           <ContactUsSection dict={dict} contact={contact}/>
