@@ -51,8 +51,8 @@ const Footer = () => {
                         </div>
                         <div>
                             <h3 className='text-white text-2xl font-bold mb-4'>{dict['footer.title.3']}</h3>
-                            <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href={dict['link.projects']}>{dict['link.projects']}</Link></p>
-                            <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href={dict['link.about']}>{dict['link.about']}</Link></p>
+                            <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href={`/${locale}/projekti`}>{dict['link.projects']}</Link></p>
+                            <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href={`/${locale}/o-nas`}>{dict['link.about']}</Link></p>
                         </div>
                     </div>
                 </div>

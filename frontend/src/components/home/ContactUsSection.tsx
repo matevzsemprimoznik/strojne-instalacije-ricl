@@ -3,7 +3,6 @@ import React, {FC} from "react";
 import Pipe from "@/components/Pipe";
 import PipeEdge from "@/components/PipeEdge";
 import ContactForm from "@/components/home/ContactForm";
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import {dictionaryType} from "@/types";
 import {Contact} from "@/types";
 
@@ -50,17 +49,7 @@ const ContactUsSection:FC<ContactUsSectionProps> = ({dict, contact}) => {
                 </div>
             </div>
             <div className='pl-8 md:pl-20 pb-20 pt-8 lg:pt-24 pr-8 md:pr-20'>
-                <GoogleReCaptchaProvider
-                    reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
-                    scriptProps={{
-                        async: true,
-                        defer: false,
-                        appendTo: "head",
-                        nonce: undefined,
-                    }}
-                >
                 <ContactForm dict={dict}/>
-                </GoogleReCaptchaProvider>
             </div>
             <div className='lg:hidden relative h-24 scale-75 sm:scale-100 origin-[0_bottom] w-[133%] sm:w-full'>
                 <PipeEdge classNameContainer='absolute left-[0px] bottom-0'/>

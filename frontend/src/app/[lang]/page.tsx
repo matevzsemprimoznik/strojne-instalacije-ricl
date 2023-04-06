@@ -15,6 +15,7 @@ import {Locale} from "@/i18n/config";
 import i18nStore from "@/store/i18n.store";
 import getCounter from "@/lib/getCounter";
 import getContact from "@/lib/getContact";
+import {useReCaptcha} from "next-recaptcha-v3";
 
 export const revalidate = 60
 
@@ -25,7 +26,6 @@ interface HomeProps {
 }
 const Home = async ({params: {lang}}: HomeProps) => {
     const [projects, comments, counter, contact] = await Promise.all([getProjects(lang), getComments(lang), getCounter(), getContact()])
-
     const dict = i18nStore.getState().dictionary
 
     return (

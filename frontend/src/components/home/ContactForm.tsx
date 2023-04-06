@@ -1,10 +1,9 @@
 'use client'
-import React, {FC, FormEvent, useCallback, useState} from "react";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import React, {FC, FormEvent, useState} from "react";
 import sendMessage from "@/lib/contact";
 import {AxiosResponse} from "axios";
-import i18nStore from "@/store/i18n.store";
 import {dictionaryType} from "@/types";
+import {useReCaptcha} from "next-recaptcha-v3";
 
 interface ContactFormProps {
     dict: dictionaryType
@@ -16,15 +15,15 @@ const ContactForm:FC<ContactFormProps> = ({dict}) => {
     const [response, setResponse] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
-    const { executeRecaptcha } = useGoogleReCaptcha();
-
+    const { executeRecaptcha, reCaptchaKey } = useReCaptcha();
 
     const handleSubmit = async (e: FormEvent) => {
+        e.preventDefault();
         setLoading(true)
         setResponse(null)
         setError(null)
-        e.preventDefault();
         try{
+
             if (!executeRecaptcha) {
                 setResponse('Napaka pri preverjanju reCAPTCHA. Poskusite znova.')
                 return;
