@@ -1,9 +1,18 @@
-import sgMail from "@sendgrid/mail";
-import {NextResponse} from "next/server";
 import axios from "axios";
 import {ContactMessage} from "@/types";
+import {createTransport} from "nodemailer";
 
-sgMail.setApiKey(process.env.SANDGRID_TOKEN || '')
+const transporter = createTransport({
+    service: 'gmail',
+    host: 'smtp.gmail.com',
+    auth: {
+        user: process.env.CONTACT_EMAIL,
+        pass: process.env.CONTACT_PASSWORD
+    },
+    tls: {
+        rejectUnauthorized: false
+    }
+})
 
 export async function POST(request: Request) {
     try{
@@ -20,14 +29,14 @@ export async function POST(request: Request) {
             return new Response('Sporočilo je prekratko.', {status: 400});
 
         const email = {
-            to: 'semprimoznik.matevz@gmail.com', // Change to your recipient
-            from: 'matevz.semprimoznik@student.um.si', // Change to your verified sender
+            to: 'semprimoznik.matevz@gmail.com',
+            from: 'semprimoznik.matevz@gmail.com',
             subject: data.subject != null ? data.subject : 'No subject',
             html: `<p><strong>Pošiljatelj: ${data.email}</strong><br/><br/>${data.message}</p>`,
         }
 
-       await sgMail.send(email)
-       return new Response('Uspešno poslano. Odgovorili vam bomo v najkrajšem možnem času.', {status: 200})
+        await transporter.sendMail(email);
+        return new Response('Uspešno poslano. Odgovorili vam bomo v najkrajšem možnem času.', {status: 200})
     }
     catch (e){
         console.log(e)
