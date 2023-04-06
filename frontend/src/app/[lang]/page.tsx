@@ -24,10 +24,8 @@ interface HomeProps {
     }
 }
 const Home = async ({params: {lang}}: HomeProps) => {
-    const projects = await getProjects(lang)
-    const comments = await getComments(lang)
-    const counter = await getCounter()
-    const contact = await getContact()
+    const [projects, comments, counter, contact] = await Promise.all([getProjects(lang), getComments(lang), getCounter(), getContact()])
+
     const dict = i18nStore.getState().dictionary
 
     return (

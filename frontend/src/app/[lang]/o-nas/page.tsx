@@ -4,19 +4,22 @@ import WaterDroplets from "@/components/WaterDroplets";
 import WaterDrop from "@/components/WaterDrop";
 import i18nStore from "@/store/i18n.store";
 import getContact from "@/lib/getContact";
+import PipeEdge from "@/components/PipeEdge";
+import Pipe from "@/components/Pipe";
+import WaterMeter from "@/components/WaterMeter";
 
 const About = async () => {
     const contact = await getContact()
     const dict = i18nStore.getState().dictionary
 
     return (
-        <div>
+        <div className='relative'>
             <Nav/>
             <WaterDrop classNameContainer='top-36 right-44 opacity-50'/>
             <WaterDrop classNameContainer='top-48 right-10 scale-50 opacity-50'/>
             <WaterDrop classNameContainer='top-80 right-24 scale-75 opacity-50' classNameInnerContainer='drop-second'/>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-5 container mx-auto mb-14 lg:mb-28">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-5 container mx-auto pb-14 lg:pb-28">
                 <div className="py-4 flex lg:flex-col flex-col-reverse order-2 lg:order-1">
                     <div className='rounded-2xl mb-20 mt-10 lg:mt-0'>
                         <iframe className='rounded-2xl' width="100%" height="400"
@@ -30,7 +33,7 @@ const About = async () => {
                             <p className="text-lg font-semibold">2222 Jakobski dol</p>
                             <p className="text-lg font-semibold">Slovenija</p>
                         </div>
-                        <div className="flex flex-row sm:flex-col justify-between mr-0 xl:mr-10">
+                        <div className="flex sm:flex-col flex-wrap justify-between mr-0 xl:mr-10">
                             <div className='flex mb-8'>
                                 <div className="bg-custom-light-blue rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
                                     <svg width="50%" height="50%" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,6 +65,13 @@ const About = async () => {
                     <p className="text-lg mb-4 font-semibold">{dict['about.description.1']}</p>
                     <p className="text-lg font-semibold">{dict['about.description.2']}</p>
                 </div>
+            </div>
+
+            <div className='hidden lg:block'>
+                <Pipe classNameContainer='absolute -z-10 -bottom-[75px] -rotate-90' style={{width: '100px', right: 'calc(28% + 21px)'}}/>
+                <PipeEdge classNameContainer='absolute right-[28%] bottom-[100px]'/>
+                <Pipe classNameContainer='absolute -z-10 right-[0px] bottom-[45px]' style={{width: '28%'}}/>
+                <WaterMeter classNameContainer='bottom-[140px] right-[14%] z-20'/>
             </div>
         </div>
     )

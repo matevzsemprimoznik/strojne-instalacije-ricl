@@ -64,7 +64,7 @@ const ContactForm:FC<ContactFormProps> = ({dict}) => {
             {!error && !response && <p></p>}
             {response && <p className='text-custom-blue font-bold mr-4'>{response}</p>}
             {error && <p className='text-yellow-500 font-bold mr-4'>{error}</p>}
-            <button type='submit' onClick={handleSubmit} className='w-[150px] min-w-[150px] h-[50px] bg-custom-blue text-white text-lg font-bold flex items-center justify-center rounded-xl'>
+            <button type='submit' onClick={handleSubmit} className='w-[100px] min-w-[100px] h-[40px] sm:w-[150px] sm:min-w-[150px] sm:h-[50px] bg-custom-blue text-white text-lg font-bold flex items-center justify-center rounded-xl'>
                 {!loading ? dict['contact.form.button'] : <div className="lds-ring"><div></div><div></div><div></div><div></div></div>}
             </button>
         </div>

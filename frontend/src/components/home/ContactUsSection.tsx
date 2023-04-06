@@ -18,7 +18,7 @@ const ContactUsSection:FC<ContactUsSectionProps> = ({dict, contact}) => {
                 <div className='pl-8'>
                     <h2 className='font-bold text-4xl mt-8 mb-10'><span className='text-custom-blue'>{dict['contact.title.1']}</span>{dict['contact.title.2']}</h2>
                     <p className='text-xl font-semibold'>{dict['contact.subtitle.1']}<br/><br/>{dict['contact.subtitle.2']}</p>
-                    <div className="flex flex-row justify-between mt-14 mb-0 lg:mb-32">
+                    <div className="flex flex-wrap justify-between mt-14 mb-0 lg:mb-32">
                         <div className='flex mb-8'>
                             <div className="bg-custom-light-blue rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
                                 <svg width="50%" height="50%" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +45,7 @@ const ContactUsSection:FC<ContactUsSectionProps> = ({dict, contact}) => {
                 </div>
                 <div className='hidden lg:block relative grow'>
                     <PipeEdge classNameContainer='absolute left-0 bottom-0'/>
-                    <Pipe classNameContainer='absolute left-[130px] -bottom-[55px]' style={{width: 'calc(100% - 140px)'}}/>
+                    <Pipe showWheelValveHande classNameContainer='absolute left-[130px] -bottom-[55px]' style={{width: 'calc(100% - 140px)'}}/>
                     <PipeEdge classNameContainer='absolute -right-[100px] bottom-0 rotate-90'/>
                 </div>
             </div>
@@ -64,7 +64,7 @@ const ContactUsSection:FC<ContactUsSectionProps> = ({dict, contact}) => {
             </div>
             <div className='lg:hidden relative h-24 scale-75 sm:scale-100 origin-[0_bottom] w-[133%] sm:w-full'>
                 <PipeEdge classNameContainer='absolute left-[0px] bottom-0'/>
-                <Pipe classNameContainer='absolute -z-10 left-[130px] -bottom-[55px]' style={{width: 'calc(100% - 250px)'}}/>
+                <Pipe showWheelValveHande classNameContainer='absolute -z-10 left-[130px] -bottom-[55px]' style={{width: 'calc(100% - 250px)'}}/>
                 <PipeEdge classNameContainer='absolute right-[0px] bottom-0 rotate-90'/>
             </div>
         </div>
