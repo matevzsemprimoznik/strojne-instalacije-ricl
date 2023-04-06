@@ -1,7 +1,4 @@
 import Link from "next/link";
-import FooterImage from '../assets/footer-image.svg'
-import Image from "next/image";
-import WaterDrop from "@/components/WaterDrop";
 import React from "react";
 import i18nStore from "@/store/i18n.store";
 

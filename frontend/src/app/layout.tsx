@@ -1,9 +1,8 @@
-import Footer from "@/components/Footer";
+import './globals.css'
 import {Metadata} from "next";
 import {ReactNode} from "react";
 import {i18n} from "@/i18n/config";
-import i18nStore from "@/store/i18n.store";
-import {getDictionary} from "@/i18n/get-dictionary";
+import Providers from "./providers";
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -18,17 +17,16 @@ interface RootLayoutProps {
 }
 
 const RootLayout = async ({children, params: {lang}}: RootLayoutProps) => {
-    i18nStore.setState({locale: lang, dictionary: await getDictionary(lang)})
     return (
-        <>
-            <main>{children}</main>
-            <Footer/>
-        </>
+            <html lang="en">
+                <head>
+                    <link rel="icon" href="/favicon.ico"/>
+                </head>
+                <body>
+                <Providers>{children}</Providers>
+                </body>
+            </html>
     )
 }
 
 export default RootLayout
-
-export function generateStaticParams() {
-    return i18n.locales.map(locale => ({lang: locale}))
-}
