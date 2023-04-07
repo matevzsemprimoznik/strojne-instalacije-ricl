@@ -18,23 +18,23 @@ const CounterSection:FC<CounterSectionProps> = ({dict, counter}) => {
             <div className='flex flex-col justify-center items-center mt-16 mb-28 px-6 md:px-0 md:mx-auto md:w-2/3 lg:w-1/2'>
                 <div className='flex flex-col md:flex-row justify-between items-center w-full'>
                     <div className='text-center md:text-left mb-5 md:mb-0'>
-                        <p className='font-bold text-5xl text-myBlue'>
+                        <p className='font-bold text-5xl text-myBlue text-center'>
                             <CountUp enableScrollSpy end={counter.attributes.stranke} />
                             <span className='text-black'>+</span>
                         </p>
                         <p className='font-bold text-2xl text-myDarkGrey'>{dict['counter.display.1']}</p>
                     </div>
-                    <div className='border-l-4 hidden md:block border-myLightBlue mx-4 h-24'></div>
+                    <div className='border-l-4 hidden md:block border-custom-light-blue mx-4 h-24'></div>
                     <div className='text-center md:text-left mb-5 md:mb-0'>
-                        <p className='font-bold text-5xl text-myBlue'>
+                        <p className='font-bold text-5xl text-myBlue text-center'>
                             <CountUp enableScrollSpy end={counter.attributes.projekti} />
                             <span className='text-black'>+</span>
                         </p>
                         <p className='font-bold text-2xl text-myDarkGrey'>{dict['counter.display.2']}</p>
                     </div>
-                    <div className='border-l-4 hidden md:block border-myLightBlue h-24 mx-4'></div>
+                    <div className='border-l-4 hidden md:block border-custom-light-blue h-24 mx-4'></div>
                     <div className='text-center md:text-left mb-5 md:mb-0'>
-                        <p className='font-bold text-5xl text-myBlue'>
+                        <p className='font-bold text-5xl text-myBlue text-center'>
                             <CountUp enableScrollSpy end={counter.attributes.leta_izkusenj} />
                             <span className='text-black'>+</span>
                         </p>

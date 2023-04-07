@@ -1,8 +1,13 @@
 import Link from "next/link";
-import React from "react";
+import React, {FC} from "react";
 import i18nStore from "@/store/i18n.store";
+import {Contact} from "@/types";
 
-const Footer = () => {
+interface FooterProps {
+    contact: Contact
+}
+
+const Footer:FC<FooterProps> = ({contact}) => {
     const dict = i18nStore.getState().dictionary
     const locale = i18nStore.getState().locale
 
@@ -42,9 +47,8 @@ const Footer = () => {
                         </div>
                         <div className='my-10 sm:my-0'>
                             <h3 className='text-white text-2xl font-bold mb-4'>{dict['footer.title.2']}</h3>
-                            <p className='text-white text-xl'>+386 41 508744</p>
-                            <p className='text-white text-xl'>+386 41 508744</p>
-                            <p className='text-white text-xl'>davorinricl@gmail.com</p>
+                            <p className='text-white text-xl'>{contact.attributes.telefon}</p>
+                            <p className='text-white text-xl'>{contact.attributes.mail}</p>
                         </div>
                         <div>
                             <h3 className='text-white text-2xl font-bold mb-4'>{dict['footer.title.3']}</h3>

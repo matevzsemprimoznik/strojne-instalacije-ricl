@@ -1,6 +1,6 @@
 "use client"
 import {FC, useState} from 'react';
-import Image, {StaticImageData} from 'next/image'
+import Image from 'next/image'
 import classNames from 'classnames';
 import {twMerge} from "tailwind-merge";
 
@@ -20,7 +20,7 @@ const ProjectsCard: FC<ProjectsCardProps> = ({ imgSrc, title, classNameContainer
 
     return (
         <div
-            className={twMerge('relative mr-5 h-96 rounded-xl overflow-hidden shadow-md object-fill', classNameContainer)}
+            className={twMerge('relative mx-2 h-96 rounded-xl overflow-hidden shadow-md object-fill', classNameContainer)}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >

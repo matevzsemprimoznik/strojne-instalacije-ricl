@@ -1,6 +1,5 @@
 import React from "react";
 import Nav from "@/components/Nav";
-import WaterDroplets from "@/components/WaterDroplets";
 import WaterDrop from "@/components/WaterDrop";
 import i18nStore from "@/store/i18n.store";
 import getContact from "@/lib/getContact";
@@ -21,7 +20,7 @@ const About = async () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-5 container mx-auto pb-14 lg:pb-28">
                 <div className="py-4 flex lg:flex-col flex-col-reverse order-2 lg:order-1">
-                    <div className='rounded-2xl mb-20 mt-10 lg:mt-0'>
+                    <div className='rounded-2xl mb-20 mt-10 lg:mt-0 bg-custom-light-blue'>
                         <iframe className='rounded-2xl' width="100%" height="400"
                                 src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Kremberk%2047B,%20Kremberk,%202233%20SV.%20ANA%20V%20SLOVENSKIH%20GORICAH+(Strojne%20in%C5%A1talacije%20Ri%C4%8Dl)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
                         </iframe>
@@ -29,8 +28,8 @@ const About = async () => {
                     <div className="flex flex-col sm:flex-row justify-between">
                         <div className="mr-10 mb-14 lg:mb-0">
                             <h2 className="text-2xl text-custom-blue font-bold mb-4">DAVORIN RIČL s.p.</h2>
-                            <p className="text-lg font-semibold">Spodnji Jakobski Dol 45</p>
-                            <p className="text-lg font-semibold">2222 Jakobski dol</p>
+                            <p className="text-lg font-semibold">Kremberk 47B, Kremberk</p>
+                            <p className="text-lg font-semibold">2233 SV. ANA</p>
                             <p className="text-lg font-semibold">Slovenija</p>
                         </div>
                         <div className="flex sm:flex-col flex-wrap justify-between mr-0 xl:mr-10">

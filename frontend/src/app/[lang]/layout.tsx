@@ -4,6 +4,7 @@ import {ReactNode} from "react";
 import {i18n} from "@/i18n/config";
 import i18nStore from "@/store/i18n.store";
 import {getDictionary} from "@/i18n/get-dictionary";
+import getContact from "@/lib/getContact";
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -18,11 +19,13 @@ interface RootLayoutProps {
 }
 
 const RootLayout = async ({children, params: {lang}}: RootLayoutProps) => {
+    const contact = await getContact()
+
     i18nStore.setState({locale: lang, dictionary: await getDictionary(lang)})
     return (
         <>
             <main>{children}</main>
-            <Footer/>
+            <Footer contact={contact}/>
         </>
     )
 }
