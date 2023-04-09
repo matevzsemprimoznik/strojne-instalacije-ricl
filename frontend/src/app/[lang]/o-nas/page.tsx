@@ -6,6 +6,7 @@ import getContact from "@/lib/getContact";
 import PipeEdge from "@/components/PipeEdge";
 import Pipe from "@/components/Pipe";
 import WaterMeter from "@/components/WaterMeter";
+import Link from "next/link";
 
 const About = async () => {
     const contact = await getContact()
@@ -41,7 +42,7 @@ const About = async () => {
                                 </div>
                                 <div className='ml-3 sm:ml-5'>
                                     <h3 className="text-lg font-bold mb-2">{dict['phone']}</h3>
-                                    <p className='whitespace-nowrap'>{contact.attributes.telefon}</p>
+                                    <p className='whitespace-nowrap'><Link href={`tel:${contact.attributes.telefon}`}>{contact.attributes.telefon}</Link></p>
                                 </div>
                             </div>
                             <div className='flex'>

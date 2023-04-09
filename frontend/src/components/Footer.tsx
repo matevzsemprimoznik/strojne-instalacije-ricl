@@ -47,7 +47,7 @@ const Footer:FC<FooterProps> = ({contact}) => {
                         </div>
                         <div className='my-10 sm:my-0'>
                             <h3 className='text-white text-2xl font-bold mb-4'>{dict['footer.title.2']}</h3>
-                            <p className='text-white text-xl'>{contact.attributes.telefon}</p>
+                            <p className='text-white text-xl'><Link href={`tel:${contact.attributes.telefon}`}>{contact.attributes.telefon}</Link></p>
                             <p className='text-white text-xl'>{contact.attributes.mail}</p>
                         </div>
                         <div>

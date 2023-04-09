@@ -12,7 +12,7 @@ const Hero = () => {
             <HeroButton/>
         </div>
 
-        <div className='hidden md:block opacity-30 lg:opacity-100 absolute top-[340px] xl:top-[260px] right-[4%] xl:right-[8%] w-[550px] h-[550px] xl:w-[634px] xl:h-[652px]'>
+        <div className='hidden lg:block absolute top-[340px] xl:top-[260px] right-[4%] xl:right-[8%] w-[550px] h-[550px] xl:w-[634px] xl:h-[652px]'>
             <svg width="100%" height="100%" viewBox="0 0 634 652" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_120_65)">
                     <path d="M412.594 392.907C412.594 392.907 448.076 470.978 448.605 470.906C449.135 470.834 465.743 455.135 465.743 455.135L417.707 366.944L409.879 374.102L412.594 392.907Z" fill="#F89B7C"/>
