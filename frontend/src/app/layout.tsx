@@ -27,6 +27,16 @@ const RootLayout = async ({children, params: {lang}}: RootLayoutProps) => {
         <head>
             <link rel="icon" href="/favicon.ico"/>
         </head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C270KYH66D"></script>
+        <script
+            dangerouslySetInnerHTML={{
+                __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          `,
+            }}
+        />
         <body>
         <Providers>{children}</Providers>
         </body>
