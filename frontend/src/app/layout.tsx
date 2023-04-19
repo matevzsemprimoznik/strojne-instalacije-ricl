@@ -3,6 +3,7 @@ import {Metadata} from "next";
 import {ReactNode} from "react";
 import {i18n} from "@/i18n/config";
 import Providers from "./providers";
+import Script from "next/script";
 
 export const metadata: Metadata = {
     title: 'Strojne inštalacije Ričl',
@@ -23,12 +24,12 @@ interface RootLayoutProps {
 
 const RootLayout = async ({children, params: {lang}}: RootLayoutProps) => {
     return (
-        <html lang="en">
+        <html lang={lang}>
         <head>
             <link rel="icon" href="/favicon.ico"/>
         </head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C270KYH66D"></script>
-        <script
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-C270KYH66D"></Script>
+        <Script
             dangerouslySetInnerHTML={{
                 __html: `
             window.dataLayer = window.dataLayer || [];
