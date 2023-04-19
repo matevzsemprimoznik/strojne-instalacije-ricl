@@ -3,7 +3,8 @@ import {Metadata} from "next";
 import {ReactNode} from "react";
 import {i18n} from "@/i18n/config";
 import Providers from "./providers";
-import Script from "next/script";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+import CookieBanner from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
     title: 'Strojne inštalacije Ričl',
@@ -28,18 +29,10 @@ const RootLayout = async ({children, params: {lang}}: RootLayoutProps) => {
         <head>
             <link rel="icon" href="/favicon.ico"/>
         </head>
-        <Script strategy='afterInteractive' src="https://www.googletagmanager.com/gtag/js?id=G-C270KYH66D"></Script>
-        <Script id="google-analytics" strategy='afterInteractive'>
-            {
-                `window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-    
-                gtag('config', 'G-C270KYH66D');`
-            }
-        </Script>
+            <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA4_TRACKING_ID || ''}/>
         <body>
-        <Providers>{children}</Providers>
+            <Providers>{children}</Providers>
+            <CookieBanner/>
         </body>
         </html>
     )
