@@ -27,7 +27,7 @@ const ProjectsCard: FC<ProjectsCardProps> = ({ imgSrc, title, classNameContainer
             <Image src={imgSrc} alt={title} layout='fill' objectFit='cover' />
             <div className={overlayClasses}>
                 <div className='flex items-center justify-center h-full'>
-                    <h1 className={classNames('w-full', 'mx-auto', 'p-3', 'text-center', 'rounded-xl', 'font-bold', 'text-black', 'text-sm', { 'invisible': !isHovered })}>{title}</h1>
+                    <h4 className={classNames('w-full', 'mx-auto', 'p-3', 'text-center', 'rounded-xl', 'font-bold', 'text-black', 'text-sm', { 'invisible': !isHovered })}>{title}</h4>
                 </div>
             </div>
         </div>

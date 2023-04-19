@@ -83,58 +83,11 @@ input, textarea{
     display: none !important;
 }
 
-.wave {
-    background: url(/path9.svg) repeat-x;
-    background-size: 10% 100%;
-    position: absolute;
-    bottom: 0;
-    width: 1000%;
-    height: 60%;
-    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
-    z-index: 1;
-}
 
-.wave:nth-of-type(2) {
-    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 3s ease -1.25s infinite;
-    opacity: 0.8;
-    z-index: 0;
-}
-
-@keyframes wave {
-    0% {
-        margin-left: 0;
-    }
-    100% {
-        margin-left: -500%;
-    }
-}
-
-@keyframes swell {
-    0%, 100% {
-        transform: translate3d(0,-3px,0);
-    }
-    50% {
-        transform: translate3d(0,0px,0);
-    }
-}
 .quarter_ring {
     width: 100%;
     height: 100%;
     background: radial-gradient(ellipse at 100% 100%, transparent 0%, transparent 24%, #BEC3C7 25%, #BEC3C7 42%, #E3E7E8 43%, #E3E7E8 62%, transparent 63%, transparent 100%);
-}
-.circle-animation{
-    background: url("/g1313.svg");
-    background-size: 100% 100%;
-    animation: rotation 8s infinite linear;
-}
-
-@keyframes rotation {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(-359deg);
-    }
 }
 
 
@@ -157,25 +110,6 @@ input, textarea{
     }
     80% {
         transform: rotate(0deg);
-    }
-}
-
-.valve-handle-animation{
-    animation: valve-handle 10s infinite linear;
-}
-
-@keyframes valve-handle {
-    0%, 100% {
-        transform: rotate(0deg);
-    }
-    30% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(90deg);
-    }
-    80% {
-        transform: rotate(90deg);
     }
 }
 
@@ -229,7 +163,7 @@ input, textarea{
     width: 100%;
     transform: scaleX(0);
     height: 2px;
-    bottom: 0px;
+    bottom: 0;
     left: 0;
     transform-origin: bottom left;
     transition: transform 0.25s ease-out;
