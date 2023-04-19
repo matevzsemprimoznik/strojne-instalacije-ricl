@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /cgi-bin/
 Disallow: /api
-Sitemap: https://www.vasadomena.com/sitemap.xml
+Sitemap: https://strojne-instalacije-ricl.vercel.app/sitemap.xml
