@@ -6,6 +6,10 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  i18n: {
+    locales: ['de', 'sl', 'hr'],
+    defaultLocale: 'sl',
+  },
   async headers() {
     return [
       {
