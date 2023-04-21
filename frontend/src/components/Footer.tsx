@@ -58,9 +58,9 @@ const Footer:FC<FooterProps> = ({contact}) => {
                     </div>
                 </div>
                 <div className='flex w-full items-center justify-center mt-4'>
-                    <Link locale='sl' className='text-white' href='/'>Slovensko</Link>
-                    <Link locale='de' className='text-white mx-5' href='/de'>Deutsch</Link>
-                    <Link locale='hr' className='text-white' href='/hr'>Hrvatsko</Link>
+                    <Link className='text-white' href='/'>Slovensko</Link>
+                    <Link className='text-white mx-5' href='/de'>Deutsch</Link>
+                    <Link className='text-white' href='/hr'>Hrvatsko</Link>
                 </div>
             </div>
 
