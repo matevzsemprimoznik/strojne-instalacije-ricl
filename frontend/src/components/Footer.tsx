@@ -54,6 +54,7 @@ const Footer:FC<FooterProps> = ({contact}) => {
                             <h3 className='text-white text-2xl font-bold mb-4'>{dict['footer.title.3']}</h3>
                             <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href={`/${locale}/projekti`}>{dict['link.projects']}</Link></p>
                             <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href={`/${locale}/o-nas`}>{dict['link.about']}</Link></p>
+                            <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href={`/${locale}/pravilnik-zasebnosti`}>{dict['footer.privacy']}</Link></p>
                         </div>
                     </div>
                 </div>

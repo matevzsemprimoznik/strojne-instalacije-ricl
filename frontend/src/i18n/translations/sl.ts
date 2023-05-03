@@ -49,6 +49,7 @@ const translations = {
     "footer.title.1": "Podjetje",
     "footer.title.2": "Kontakt",
     "footer.title.3": "Povezave",
+    "footer.privacy": "Pravilnik zasebnosti",
 
 
     // projects page
@@ -60,5 +61,22 @@ const translations = {
     "about.title.2": "poslanstvo",
     "about.description.1": "Smo družinsko podjetje, ki se ukvarja s strojnimi inštalacijami, ki ga sestavljava oče in sin. S svojim znanjem in izkušnjami na področju strojnih inštalacij, kot so ogrevanje, vodovod in klimatizacija, že vrsto let zadovoljujeta svoja stranke.",
     "about.description.2": "Naše poslanstvo je zagotoviti kakovostne in učinkovite rešitve za svoje stranke, ki jim bodo zagotovile ugodno bivanjsko okolje in prihranek pri stroških. Z vami bomo komunicirali odkrito in vas vedno poslušali ter vam svetovali, da lahko skupaj najdemo najboljšo rešitev za vaše potrebe.",
+
+    //privacy page
+    "privacy.title.1": "Splošno",
+    "privacy.description.1": "V našem podjetju spoštujemo vašo pravico do zasebnosti in se zavezujemo, da bomo varovali zaupnost osebnih podatkov in zasebnost obiskovalcev naše spletne strani. Zbrane osebne podatke bomo uporabili izključno za opravljanje storitev, ki jih spletno mesto ponuja. Z izjavo o varovanju osebnih podatkov vas želimo obvestiti o obdelavi vaših podatkov v našem podjetju ter o vaših pravicah v zvezi z varstvom podatkov.",
+    "privacy.title.2": "Upravljalec podatkov",
+    "privacy.description.2":"Upravljalec osebnih podatkov v okviru te spletne strani po predpisih Splošne uredbe o varstvu podatkov:",
+    "privacy.title.3": "Namen obdelave osebnih podatkov",
+    "privacy.description.3":"Podjetje na spletnem mestu zbira osebne podatke posredovane preko obrazcev. Osebni podatki, ki nam jih posredujete bodo obravnavani zaupno in bodo uporabljeni zgolj za namene, za katere so bili posredovani. Vaši osebni podatki se bodo uporabljali v skladu z zakoni in predpisi, ki opredeljujejo varovanje osebnih podatkov (Splošna uredba EU o varstvu podatkov).",
+    "privacy.title.4": "Zbiranje podatkov za pregled statistike uporabe spletnega mesta",
+    "privacy.description.4":"Spletno mesto lahko samodejno zbira tudi nekatere podatke o strojni in programski opremi uporabnikovega računalnika ter IP naslov naprave, s katero dostopate do spletnega mesta. Ti podatki bodo uporabljeni izključno za izdelavo splošne statistike o uporabi spletnega mesta.",
+    "privacy.title.5": "Kontaktni obrazec",
+    "privacy.description.5": "Na naši spletni strani lahko izpolnite spletni kontaktni obrazec za izvedbo povpraševanj. V ta namen naše podjetje od vas zbira naslednje podatke, ki jih posredujete na prostovoljen način:",
+    "privacy.description.5.list.item.1": "Elektronski naslov",
+    "privacy.title.6": "Obdobje hrambe osebnih podatkov",
+    "privacy.description.6": "Podatki se hranijo največ toliko časa, kolikor je potrebno za dosego namena, zaradi katerega so bili zbrani ali nadalje obdelani oziroma do poteka zastaralnih rokov za izpolnitev obveznosti ali zakonsko predpisanega roka hrambe.",
+    "privacy.title.7": "Piškotki",
+    "privacy.description.7": "Piškotki so majhne tekstovne datoteke, ki se ob obisku spletne strani prenesejo na vaš računalnik ali mobilno napravo. Spletna stran uporablja piškotke storitve Google Analytics za analizo obiska naše spletne strani. S pomočjo teh piškotkov se zbirajo statistični podatki o uporabi spletnega mesta brez osebne prepoznave obiskovalcev.",
 }
 export default translations
