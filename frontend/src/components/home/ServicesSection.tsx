@@ -15,7 +15,7 @@ const ServicesSection = () => {
             <div className='w-72 text-center bg-white flex justify-center items-center h-20 border-4 border-custom-light-blue text-custom-blue hover:border-custom-blue transition duration-500 text-lg font-bold rounded-3xl'><p>{dict['services.card.3']}</p></div>
             <div className='w-72 justify-self-end flex justify-center items-center bg-white text-center h-20 border-4 border-custom-light-blue hover:border-custom-blue transition duration-500 text-custom-blue text-lg font-bold rounded-3xl'><p>{dict['services.card.4']}</p></div>
             <div className='md:ml-14 w-72 text-center flex justify-center items-center bg-white h-20 border-4 border-custom-light-blue text-custom-blue hover:border-custom-blue transition duration-500 text-lg font-bold rounded-3xl'><p>{dict['services.card.5']}</p></div>
-            <div className='md:mr-14 justify-self-end flex justify-center items-center bg-white w-72 text-center h-20 border-4 border-custom-light-blue hover:border-custom-blue transition duration-500 text-custom-blue text-lg font-bold rounded-3xl'><p>{dict['services.card.1']}</p></div>
+            <div className='md:mr-14 justify-self-end flex justify-center items-center bg-white w-72 text-center h-20 border-4 border-custom-light-blue hover:border-custom-blue transition duration-500 text-custom-blue text-lg font-bold rounded-3xl'><p>{dict['services.card.6']}</p></div>
         </div>
         <div className='absolute top-[40px] md:top-[150px] left-1/2 -translate-x-1/2 -z-10 w-full sm:w-[500px] md:w-[766px]'>
             <svg width="100%" height="785" viewBox="0 0 766 785" fill="none" xmlns="http://www.w3.org/2000/svg">

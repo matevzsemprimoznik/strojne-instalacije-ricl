@@ -55,6 +55,7 @@ export interface ContactMessage {
 
     message: string;
     subject: string;
+    accepted: boolean;
 }
 
 export type localeType = typeof i18n['locales'][number]

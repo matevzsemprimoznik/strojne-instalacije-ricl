@@ -1,6 +1,8 @@
 const translations = {
     "phone": "Telefon",
     "email": "El. naslov",
+    "cookie-banner.1": "Ta stran uporablja ",
+    "cookie-banner.2": "piškotke.",
 
     "link.projects": "Projekti",
     "link.about": "O nas",
@@ -24,7 +26,7 @@ const translations = {
     "services.subtitle": "Naše storitve",
     "services.title.1": "Nudimo različne vrste ",
     "services.title.2": "storitev za vas",
-    "services.card.1": "Toplotne črpalke",
+    "services.card.1": "Polaganje ploščic",
     "services.card.2": "Klimatske naprave",
     "services.card.3": "Kopalnice",
     "services.card.4": "Polaganje cevi",
@@ -43,8 +45,18 @@ const translations = {
     "contact.form.subject": "Zadeva",
     "contact.form.subject.placeholder": "Katero področje vas zanima?",
     "contact.form.message": "Sporočilo",
+    "contact.form.gdpr.1": "Strinjam se s ",
+    "contact.form.gdpr.2": "pogoji ",
+    "contact.form.gdpr.3": "pošijanja.",
     "contact.form.message.placeholder": "Vaše sporočilo",
     "contact.form.button": "Pošlji",
+    "contact.form.response.success": "Uspešno poslano. Odgovorili vam bomo v najkrajšem možnem času.",
+    "contact.form.response.error-server": "Prišlo je do napake na strežniku. Prosimo poskusite kasneje ali pa nas kontaktirajte na drug način.",
+    "contact.form.response.error-privacy": "Za pošiljanje sporočila morate sprejeti pogoje uporabe.",
+    "contact.form.response.error-length": "Prekratko sporočilo.",
+    "contact.form.response.error-email": "Napačen elektronski naslov.",
+    "contact.form.response.error-recaptha": "Prišlo je do napake pri izpolnjevanju obrazca. Prosimo poskusite kasneje ali pa nas kontaktirajte na drug način.",
+    "contact.form.response.error": "Napaka pri pošiljanju sporočila. Poskusite znova.",
 
     "footer.title.1": "Podjetje",
     "footer.title.2": "Kontakt",
@@ -60,5 +72,7 @@ const translations = {
     "about.title.2": "poslanstvo",
     "about.description.1": "Smo družinsko podjetje, ki se ukvarja s strojnimi inštalacijami, ki ga sestavljava oče in sin. S svojim znanjem in izkušnjami na področju strojnih inštalacij, kot so ogrevanje, vodovod in klimatizacija, že vrsto let zadovoljujeta svoja stranke.",
     "about.description.2": "Naše poslanstvo je zagotoviti kakovostne in učinkovite rešitve za svoje stranke, ki jim bodo zagotovile ugodno bivanjsko okolje in prihranek pri stroških. Z vami bomo komunicirali odkrito in vas vedno poslušali ter vam svetovali, da lahko skupaj najdemo najboljšo rešitev za vaše potrebe.",
+
+
 }
 export default translations

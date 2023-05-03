@@ -29,8 +29,9 @@ interface RootLayoutProps {
 
 const RootLayout = async ({children, params: {lang}}: RootLayoutProps) => {
     const contact = await getContact()
+    const dictionary = await getDictionary(lang)
 
-    i18nStore.setState({locale: lang, dictionary: await getDictionary(lang)})
+    i18nStore.setState({locale: lang, dictionary})
     return (
         <html lang={lang}>
             <head>
@@ -39,7 +40,7 @@ const RootLayout = async ({children, params: {lang}}: RootLayoutProps) => {
             <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA4_TRACKING_ID || ''}/>
             <body>
                 <Providers>{children}</Providers>
-                <CookieBanner/>
+                <CookieBanner dict={dictionary}/>
                 <Footer contact={contact}/>
             </body>
         </html>

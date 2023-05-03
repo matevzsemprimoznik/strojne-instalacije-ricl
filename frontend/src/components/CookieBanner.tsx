@@ -1,7 +1,8 @@
 'use client';
 
-import {useEffect, useState} from "react";
+import {FC, useEffect, useState} from "react";
 import {getLocalStorage, setLocalStorage} from "@/utils/storageHelper";
+import {dictionaryType} from "@/types";
 
 enum CookieConsent {
     GRANTED = 'granted',
@@ -9,7 +10,10 @@ enum CookieConsent {
     LOADING = 'loading',
     NULL = 'null'
 }
-export default function CookieBanner(){
+interface CookieBannerProps {
+    dict: dictionaryType
+}
+const CookieBanner:FC<CookieBannerProps> = ({dict}) => {
     const [cookieConsent, setCookieConsent] = useState<CookieConsent>(CookieConsent.LOADING);
 
     useEffect (() => {
@@ -29,13 +33,13 @@ export default function CookieBanner(){
 
     }, [cookieConsent]);
     return (
-        <div className={`my-10 mx-auto w-10/12 md:max-w-screen-sm
+        <div className={`my-10 mx-auto w-11/12 xs:w-8/12 sm:w-[500px]
                         fixed bottom-0 left-0 right-0
-                        flex px-3 md:px-4 py-3 justify-between items-center flex-col sm:flex-row gap-4  
+                        flex px-3 md:px-4 py-3 justify-between items-center flex-row gap-4  
                         bg-white rounded-lg shadow-lg z-50 ${cookieConsent == CookieConsent.NULL ? "flex" : "hidden"}`}>
 
             <div className='text-center'>
-                <p className='text-sm'>Ta stran uporablja piškotke za spremljanje prometa in analizo vašega obiskovanja spletne strani, z namenom izboljšanja uporabniške izkušnje.</p>
+                <p className='text-sm'>{dict["cookie-banner.1"]}<a className='text-custom-blue underline' href='/pravilnik-zasebnosti'>{dict["cookie-banner.2"]}</a></p>
             </div>
 
 
@@ -45,3 +49,4 @@ export default function CookieBanner(){
             </div>
         </div>
     )}
+export default CookieBanner;

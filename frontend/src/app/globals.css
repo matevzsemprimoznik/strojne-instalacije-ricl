@@ -19,6 +19,37 @@ html, body {
         font-size: 12px;
     }
 }
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"] + *::before {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 25px;
+    height: 25px;
+    border-radius: 10%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: #CCCCCC;
+    margin-right: 10px;
+}
+input[type="checkbox"]:checked + *::before {
+    content: "✓";
+    color: white;
+    text-align: center;
+    background: #1188ff;
+    border-color: #1188ff;
+}
+input[type="checkbox"]:checked {
+    color: #1188ff;
+}
+form input{
+    border: 2px solid white !important;
+}
+form input:focus {
+    border: 2px solid #1188ff !important;
+}
 
 .lds-ring {
     display: inline-block;
