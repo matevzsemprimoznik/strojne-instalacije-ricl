@@ -63,6 +63,7 @@ const translations: dictionaryType = {
     "footer.title.1": "Kompanija",
     "footer.title.2": "Kontakt",
     "footer.title.3": "Linkovi",
+    "footer.privacy": "Politika privatnosti",
 
 
     // projects page
@@ -74,5 +75,22 @@ const translations: dictionaryType = {
     "about.title.2": "misija",
     "about.description.1": "Mi smo obiteljska tvrtka koja se bavi hardverskim instalacijama koju čine otac i sin. Svojim znanjem i iskustvom na području strojarskih instalacija kao što su grijanje, vodovod i klimatizacija već dugi niz godina zadovoljavaju svoje kupce.",
     "about.description.2": "Naša misija je ponuditi kvalitetna i učinkovita rješenja za naše kupce, koja će im omogućiti ugodno životno okruženje i uštedu troškova. S Vama ćemo otvoreno komunicirati i uvijek Vas saslušati i savjetovati kako bismo zajedno pronašli najbolje rješenje za Vaše potrebe.",
+
+    //privacy page
+    "privacy.title.1": "Općenito",
+    "privacy.description.1": "U našem poduzeću poštujemo Vaše pravo na privatnost te se zalažemo za zaštitu povjerljivosti osobnih podataka i privatnosti posjetitelja naše web stranice. Prikupljene osobne podatke koristit ćemo isključivo za pružanje usluga koje nudi web stranica. Izjavom o zaštiti osobnih podataka želimo Vas informirati o obradi Vaših podataka u našem poduzeću te o Vašim pravima u vezi sa zaštitom podataka.",
+    "privacy.title.2": "Kontrolor podataka",
+    "privacy.description.2":"Voditelj osobnih podataka u okviru ove web stranice prema odredbama Opće uredbe o zaštiti podataka:",
+    "privacy.title.3": "Svrha obrade osobnih podataka",
+    "privacy.description.3":"Tvrtka na web stranici prikuplja osobne podatke dostavljene putem obrazaca. Osobni podaci koje nam dostavite tretirat ćemo povjerljivo i koristit ćemo ih samo u svrhe za koje su dostavljeni. Vaši osobni podaci će koristiti u skladu sa zakonima i propisima koji definiraju zaštitu osobnih podataka (Opća uredba EU o zaštiti podataka).",
+    "privacy.title.4": "Prikupljanje podataka za pregled statistike korištenja web stranice",
+    "privacy.description.4":"Web stranica također može automatski prikupljati određene informacije o hardveru i softveru računala korisnika te IP adresi uređaja s kojim pristupate web stranici. Ti će se podaci koristiti isključivo za izradu opće statistike o korištenju web stranice.",
+    "privacy.title.5": "Kontakt obrazac",
+    "privacy.description.5":"Na našoj web stranici možete ispuniti online kontakt obrazac za postavljanje upita. U tu svrhu naša tvrtka od vas prikuplja sljedeće podatke koje dobrovoljno dajete:",
+    "privacy.description.5.list.item.1": "Email adresa",
+    "privacy.title.6": "Razdoblje čuvanja osobnih podataka",
+    "privacy.description.6": "Podaci se čuvaju onoliko dugo koliko je potrebno za postizanje svrhe za koju su prikupljeni ili daljnje obrađeni, odnosno do isteka zastare ispunjenja obveza ili zakonom propisanog roka čuvanja.",
+    "privacy.title.7": "Kolačići",
+    "privacy.description.7": "Kolačići su male tekstualne datoteke koje se preuzimaju na vaše računalo ili mobilni uređaj kada posjetite web stranicu. Web stranica koristi Google Analytics kolačiće za analizu posjeta našoj web stranici. Uz pomoć ovih kolačića prikupljaju se statistički podaci o korištenju web stranice bez osobne identifikacije posjetitelja.",
 }
 export default translations
