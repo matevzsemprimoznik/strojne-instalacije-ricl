@@ -7,8 +7,9 @@ import {useReCaptcha} from "next-recaptcha-v3";
 
 interface ContactFormProps {
     dict: dictionaryType
+    locale: localeType
 }
-const ContactForm:FC<ContactFormProps> = ({dict}) => {
+const ContactForm:FC<ContactFormProps> = ({dict, locale}) => {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
@@ -16,7 +17,7 @@ const ContactForm:FC<ContactFormProps> = ({dict}) => {
     const [response, setResponse] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
-    const { executeRecaptcha, reCaptchaKey } = useReCaptcha();
+    const { executeRecaptcha } = useReCaptcha();
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
@@ -35,7 +36,7 @@ const ContactForm:FC<ContactFormProps> = ({dict}) => {
                 return;
             }
             const token = await executeRecaptcha("contact_form");
-            const response:AxiosResponse = await sendMessage({email, subject, message, token, accepted});
+            await sendMessage({email, subject, message, token, accepted});
             setResponse(dict['contact.form.response.success'])
             setLoading(false)
             setError(null)
@@ -68,7 +69,7 @@ const ContactForm:FC<ContactFormProps> = ({dict}) => {
         </div>
         <div className='mt-7 flex flex-row'>
             <input onChange={e => setAccepted(e.target.checked)} type='checkbox' id='gdpr' className='mr-2 mt-0.5 w-5 h-5'/>
-            <label htmlFor='gdpr'>{dict['contact.form.gdpr.1']}<a className='text-custom-blue underline' href='/pravilnik-zasebnosti'>{dict['contact.form.gdpr.2']}</a>{dict['contact.form.gdpr.3']}</label>
+            <label htmlFor='gdpr'>{dict['contact.form.gdpr.1']}<a className='text-custom-blue underline' href={`/${locale}/pravilnik-zasebnosti`}>{dict['contact.form.gdpr.2']}</a>{dict['contact.form.gdpr.3']}</label>
         </div>
 
         <div className='flex justify-between items-center flex-row mt-10'>

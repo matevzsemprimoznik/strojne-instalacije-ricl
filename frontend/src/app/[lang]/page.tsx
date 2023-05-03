@@ -26,6 +26,7 @@ interface HomeProps {
 const Home = async ({params: {lang}}: HomeProps) => {
     const [projects, comments, counter, contact] = await Promise.all([getProjects(lang), getComments(lang), getCounter(), getContact()])
     const dict = i18nStore.getState().dictionary
+    const locale = i18nStore.getState().locale
 
     return (
       <>
@@ -35,7 +36,7 @@ const Home = async ({params: {lang}}: HomeProps) => {
           <ProjectSection projects={projects} dict={dict}/>
           <ServicesSection/>
           <CommentSection comments={comments}/>
-          <ContactUsSection dict={dict} contact={contact}/>
+          <ContactUsSection dict={dict} contact={contact} locale={locale}/>
       </>
   )
 }

@@ -3,6 +3,8 @@ import {dictionaryType} from "@/types";
 const translations:dictionaryType = {
     "phone": "Telefon",
     "email": "E-Mail",
+    "allow": 'Erlauben',
+    "refuse": 'Ablehnen',
     "cookie-banner.1": "Diese Seite verwendet ",
     "cookie-banner.2": "Cookies.",
 

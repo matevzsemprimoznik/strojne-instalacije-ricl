@@ -2,7 +2,7 @@
 
 import {FC, useEffect, useState} from "react";
 import {getLocalStorage, setLocalStorage} from "@/utils/storageHelper";
-import {dictionaryType} from "@/types";
+import {dictionaryType, localeType} from "@/types";
 
 enum CookieConsent {
     GRANTED = 'granted',
@@ -12,8 +12,9 @@ enum CookieConsent {
 }
 interface CookieBannerProps {
     dict: dictionaryType
+    locale: localeType
 }
-const CookieBanner:FC<CookieBannerProps> = ({dict}) => {
+const CookieBanner:FC<CookieBannerProps> = ({dict, locale}) => {
     const [cookieConsent, setCookieConsent] = useState<CookieConsent>(CookieConsent.LOADING);
 
     useEffect (() => {
@@ -39,13 +40,13 @@ const CookieBanner:FC<CookieBannerProps> = ({dict}) => {
                         bg-white rounded-lg shadow-lg z-50 ${cookieConsent == CookieConsent.NULL ? "flex" : "hidden"}`}>
 
             <div className='text-center'>
-                <p className='text-sm'>{dict["cookie-banner.1"]}<a className='text-custom-blue underline' href='/pravilnik-zasebnosti'>{dict["cookie-banner.2"]}</a></p>
+                <p className='text-sm'>{dict["cookie-banner.1"]}<a className='text-custom-blue underline' href={`/${locale}/pravilnik-zasebnosti`}>{dict["cookie-banner.2"]}</a></p>
             </div>
 
 
             <div className='flex gap-2'>
-                <button className='px-5 py-2 text-gray-300 rounded-md border-gray-900' onClick={() => setCookieConsent(CookieConsent.DENIED)}>Zavrni</button>
-                <button className='bg-gray-900 px-5 py-2 text-white rounded-lg' onClick={() => setCookieConsent(CookieConsent.GRANTED)}>Dovoli</button>
+                <button className='px-5 py-2 text-gray-300 rounded-md border-gray-900' onClick={() => setCookieConsent(CookieConsent.DENIED)}>{dict['refuse']}</button>
+                <button className='bg-gray-900 px-5 py-2 text-white rounded-lg' onClick={() => setCookieConsent(CookieConsent.GRANTED)}>{dict['allow']}</button>
             </div>
         </div>
     )}

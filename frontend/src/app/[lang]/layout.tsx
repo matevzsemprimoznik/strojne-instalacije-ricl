@@ -40,7 +40,7 @@ const RootLayout = async ({children, params: {lang}}: RootLayoutProps) => {
             <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA4_TRACKING_ID || ''}/>
             <body>
                 <Providers>{children}</Providers>
-                <CookieBanner dict={dictionary}/>
+                <CookieBanner dict={dictionary} locale={lang}/>
                 <Footer contact={contact}/>
             </body>
         </html>

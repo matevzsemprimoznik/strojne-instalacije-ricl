@@ -1,6 +1,8 @@
 const translations = {
     "phone": "Telefon",
     "email": "El. naslov",
+    "allow": 'Dovoli',
+    "refuse": 'Zavrni',
     "cookie-banner.1": "Ta stran uporablja ",
     "cookie-banner.2": "piškotke.",
 

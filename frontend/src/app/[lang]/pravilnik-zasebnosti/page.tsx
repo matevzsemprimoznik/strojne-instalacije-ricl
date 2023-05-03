@@ -34,7 +34,7 @@ const Privacy = async () => {
                 <h3 className='font-bold text-3xl my-8'>{dict['privacy.title.7']}</h3>
                 <p className="text-lg font-semibold ">{dict['privacy.description.7']}</p>
                 <div className="mt-8 mb-16">
-                    <PrivacyButtons />
+                    <PrivacyButtons dict={dict}/>
                 </div>
             </div>
         </>

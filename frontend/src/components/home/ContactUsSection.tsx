@@ -3,15 +3,16 @@ import React, {FC} from "react";
 import Pipe from "@/components/Pipe";
 import PipeEdge from "@/components/PipeEdge";
 import ContactForm from "@/components/home/ContactForm";
-import {dictionaryType} from "@/types";
+import {dictionaryType, localeType} from "@/types";
 import {Contact} from "@/types";
 import Link from "next/link";
 
 interface ContactUsSectionProps {
     dict: dictionaryType
     contact: Contact
+    locale: localeType
 }
-const ContactUsSection:FC<ContactUsSectionProps> = ({dict, contact}) => {
+const ContactUsSection:FC<ContactUsSectionProps> = ({dict, contact, locale}) => {
     return <div className='w-full container flex mt-32 sm:mt-44 -mb-14 sm:mb-20' id='contact-us'>
         <div className='grid grid-cols-1 lg:grid-cols-2 shadow-lg shadow-custom-light-blue-shadow mb-14 rounded-3xl grow bg-white'>
             <div className='flex-col flex pt-8 md:pt-16 md:pl-12 pr-8 md:pr-20 lg:pr-0'>
@@ -50,7 +51,7 @@ const ContactUsSection:FC<ContactUsSectionProps> = ({dict, contact}) => {
                 </div>
             </div>
             <div className='pl-8 md:pl-20 pb-20 pt-8 lg:pt-24 pr-8 md:pr-20'>
-                <ContactForm dict={dict}/>
+                <ContactForm dict={dict} locale={locale}/>
             </div>
             <div className='lg:hidden relative h-24 scale-75 sm:scale-100 origin-[0_bottom] w-[133%] sm:w-full'>
                 <PipeEdge classNameContainer='absolute left-[0px] bottom-0'/>
