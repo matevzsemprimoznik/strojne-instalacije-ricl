@@ -44,10 +44,10 @@ input[type="checkbox"]:checked + *::before {
 input[type="checkbox"]:checked {
     color: #1188ff;
 }
-form input{
+form input, form textarea{
     border: 2px solid white !important;
 }
-form input:focus {
+form input:focus, form textarea:focus {
     border: 2px solid #1188ff !important;
 }
 

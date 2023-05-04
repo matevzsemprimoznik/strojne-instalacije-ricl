@@ -1,20 +1,21 @@
 import React from "react";
 import Nav from "@/components/Nav";
 import WaterDrop from "@/components/WaterDrop";
-import i18nStore from "@/store/i18n.store";
 import getContact from "@/lib/getContact";
 import PipeEdge from "@/components/PipeEdge";
 import Pipe from "@/components/Pipe";
 import WaterMeter from "@/components/WaterMeter";
 import Link from "next/link";
+import {getDictionary} from "@/i18n/get-dictionary";
 
 const About = async () => {
     const contact = await getContact()
-    const dict = i18nStore.getState().dictionary
+    const locale = 'hr'
+    const dict = await getDictionary(locale)
 
     return (
         <div className='relative'>
-            <Nav/>
+            <Nav dict={dict} locale={locale}/>
             <WaterDrop classNameContainer='top-36 right-44 opacity-50'/>
             <WaterDrop classNameContainer='top-48 right-10 scale-50 opacity-50'/>
             <WaterDrop classNameContainer='top-80 right-24 scale-75 opacity-50' classNameInnerContainer='drop-second'/>

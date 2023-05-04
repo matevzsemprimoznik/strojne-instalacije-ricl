@@ -1,14 +1,13 @@
 import Comment from "@/components/Comment";
 import React, {FC} from "react";
-import {Comment as CommentType} from "@/types";
+import {Comment as CommentType, dictionaryType} from "@/types";
 import Carousel from "@/components/home/Carousel";
-import i18nStore from "@/store/i18n.store";
 
 interface CommentSectionProps {
     comments: CommentType[]
+    dict: dictionaryType
 }
-const CommentSection:FC<CommentSectionProps> = ({comments= []}) => {
-    const dict = i18nStore.getState().dictionary;
+const CommentSection:FC<CommentSectionProps> = ({comments= [], dict}) => {
 
     return <div>
         <div className='absolute w-full bottom-0 left-0 -z-30'>

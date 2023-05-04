@@ -1,15 +1,17 @@
 import React from "react";
 import HeroButton from "@/components/home/HeroButton";
-import i18nStore from "@/store/i18n.store";
+import {dictionaryType} from "@/types";
 
-const Hero = () => {
-    const dict = i18nStore.getState().dictionary
+interface HeroProps {
+    dict: dictionaryType
+}
+const Hero = ({dict}: HeroProps) => {
 
     return <div className='h-[530px] xs:h-[530px] sm:h-[580px] md:h-[850px]'>
         <div className='container m-auto py-8 sm:py-28'>
             <h1 className='text-5xl sm:text-6xl text-white font-bold tracking-wide'>{dict['hero.title.1']}<br/>{dict['hero.title.2']}</h1>
             <p className='text-white text-2xl mt-10'>{dict['hero.subtitle.1']}<br/>{dict['hero.subtitle.2']}</p>
-            <HeroButton/>
+            <HeroButton dict={dict}/>
         </div>
 
         <div className='hidden lg:block absolute top-[340px] xl:top-[260px] right-[4%] xl:right-[8%] w-[550px] h-[550px] xl:w-[634px] xl:h-[652px]'>

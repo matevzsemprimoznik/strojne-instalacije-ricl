@@ -16,6 +16,10 @@ const translations:dictionaryType = {
 
     "link.projects": "Projekte",
     "link.about": "Über uns",
+    "link.projects.value": "projekte",
+    "link.about.value": "uber-uns",
+    "link.home.value": "heim",
+    "link.privacy.value": "datenschutz-bestimmungen",
 
     "hero.title.1": "Benötigen Sie hochwertige",
     "hero.title.2": "Hardwareinstallationen?",

@@ -14,6 +14,10 @@ const translations = {
 
     "link.projects": "Projekti",
     "link.about": "O nas",
+    "link.projects.value": "projekti",
+    "link.about.value": "o-nas",
+    "link.home.value": "domov",
+    "link.privacy.value": "pravilnik-zasebnosti",
 
     "hero.title.1": "Potrebujete kakovostne",
     "hero.title.2": "strojne inštalacije?",
@@ -55,7 +59,7 @@ const translations = {
     "contact.form.message": "Sporočilo",
     "contact.form.gdpr.1": "Strinjam se s ",
     "contact.form.gdpr.2": "pogoji ",
-    "contact.form.gdpr.3": "pošijanja.",
+    "contact.form.gdpr.3": "pošiljanja.",
     "contact.form.message.placeholder": "Vaše sporočilo",
     "contact.form.button": "Pošlji",
     "contact.form.response.success": "Uspešno poslano. Odgovorili vam bomo v najkrajšem možnem času.",

@@ -1,11 +1,24 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-import { i18n } from './i18n/config'
+import {i18n, localeHomeMapping} from './i18n/config'
 import acceptLanguage from "accept-language";
 
 const cookieName = 'i18next'
 
+const getLanguageFromHeader = (header: string | null) => {
+    const languages = header?.split(',') || []
+    let language = null
+
+    for (let i = 0; i < languages.length; i++) {
+        const locale = languages[i].split('-')[0]
+        if (i18n.locales.includes(locale as any)) {
+            language = locale
+            break
+        }
+    }
+    return language
+}
 export function middleware(request: NextRequest) {
     const pathname = request.nextUrl.pathname
 
@@ -18,25 +31,18 @@ export function middleware(request: NextRequest) {
     if (languageCookie)
         lng = acceptLanguage.get(languageCookie.value)
     if (!lng)
-        lng = acceptLanguage.get(request.headers.get('Accept-Language'))
+        lng = getLanguageFromHeader(request.headers.get('Accept-Language'))
     if (!lng) lng = i18n.defaultLocale
 
 
-    if (!i18n.locales.some(loc => pathname.startsWith(`/${loc}`)) && !pathname.startsWith('/_next'))
-        return NextResponse.redirect(new URL(`/${lng}${pathname}`, request.url))
-
-    const refererHeader = request.headers.get('referer')
-    if (refererHeader) {
-        const refererUrl = new URL(refererHeader)
-        const lngInReferer = i18n.locales.find((l) => refererUrl.pathname.startsWith(`/${l}`))
-        const response = NextResponse.next()
-        if (lngInReferer) response.cookies.set(cookieName, lngInReferer)
-        return response
+    if(pathname === '/'){
+        const homePagePath = localeHomeMapping[lng as keyof typeof localeHomeMapping] || localeHomeMapping[i18n.defaultLocale as keyof typeof localeHomeMapping]
+        return NextResponse.redirect(new URL(homePagePath, request.url))
     }
 
     return NextResponse.next()
 }
 
 export const config = {
-    matcher: ['/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js|robots.txt|sitemap.xml).*)']
+    matcher: ['/']
 }

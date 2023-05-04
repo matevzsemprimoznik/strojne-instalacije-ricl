@@ -1,15 +1,14 @@
 import Link from "next/link";
 import React, {FC} from "react";
-import i18nStore from "@/store/i18n.store";
-import {Contact} from "@/types";
+import {Contact, dictionaryType, localeType} from "@/types";
 
 interface FooterProps {
     contact: Contact
+    dict: dictionaryType
+    locale: localeType
 }
 
-const Footer:FC<FooterProps> = ({contact}) => {
-    const dict = i18nStore.getState().dictionary
-    const locale = i18nStore.getState().locale
+const Footer:FC<FooterProps> = ({contact, dict, locale}) => {
 
     return (
         <footer className='flex relative'>
@@ -52,16 +51,16 @@ const Footer:FC<FooterProps> = ({contact}) => {
                         </div>
                         <div>
                             <h3 className='text-white text-2xl font-bold mb-4'>{dict['footer.title.3']}</h3>
-                            <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href={`/${locale}/projekti`}>{dict['link.projects']}</Link></p>
-                            <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href={`/${locale}/o-nas`}>{dict['link.about']}</Link></p>
-                            <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href={`/${locale}/pravilnik-zasebnosti`}>{dict['footer.privacy']}</Link></p>
+                            <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href={dict['link.projects.value']}>{dict['link.projects']}</Link></p>
+                            <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href={dict['link.about.value']}>{dict['link.about']}</Link></p>
+                            <p><Link className='text-white text-xl hover-underline-animation after:bottom-0' href={dict['link.privacy.value']}>{dict['footer.privacy']}</Link></p>
                         </div>
                     </div>
                 </div>
                 <div className='flex w-full items-center justify-center mt-4'>
-                    <Link className='text-white' href='/'>Slovensko</Link>
-                    <Link className='text-white mx-5' href='/de'>Deutsch</Link>
-                    <Link className='text-white' href='/hr'>Hrvatsko</Link>
+                    <Link className='text-white' href='/domov'>Slovensko</Link>
+                    <Link className='text-white mx-5' href='/heim'>Deutsch</Link>
+                    <Link className='text-white' href='/doma'>Hrvatsko</Link>
                 </div>
             </div>
 

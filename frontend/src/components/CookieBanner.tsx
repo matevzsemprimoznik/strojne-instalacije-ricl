@@ -3,6 +3,7 @@
 import {FC, useEffect, useState} from "react";
 import {getLocalStorage, setLocalStorage} from "@/utils/storageHelper";
 import {dictionaryType, localeType} from "@/types";
+import Link from "next/link";
 
 enum CookieConsent {
     GRANTED = 'granted',
@@ -40,7 +41,7 @@ const CookieBanner:FC<CookieBannerProps> = ({dict, locale}) => {
                         bg-white rounded-lg shadow-lg z-50 ${cookieConsent == CookieConsent.NULL ? "flex" : "hidden"}`}>
 
             <div className='text-center'>
-                <p className='text-sm'>{dict["cookie-banner.1"]}<a className='text-custom-blue underline' href={`/${locale}/pravilnik-zasebnosti`}>{dict["cookie-banner.2"]}</a></p>
+                <p className='text-sm'>{dict["cookie-banner.1"]}<Link className='text-custom-blue underline' href={dict['link.privacy.value']}>{dict["cookie-banner.2"]}</Link></p>
             </div>
 
 

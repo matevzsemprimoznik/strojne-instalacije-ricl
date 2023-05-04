@@ -1,9 +1,11 @@
 'use client'
 
-import i18nStore from "@/store/i18n.store";
+import {dictionaryType} from "@/types";
 
-const HeroButton = () => {
-    const dict = i18nStore.getState().dictionary;
+interface HeroButtonProps {
+    dict: dictionaryType
+}
+const HeroButton = ({dict}: HeroButtonProps) => {
     const onClick = () => {
         const element = document.getElementById('contact-us');
         if (element) {

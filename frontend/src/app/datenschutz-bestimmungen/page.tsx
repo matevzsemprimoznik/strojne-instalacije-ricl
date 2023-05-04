@@ -1,14 +1,15 @@
 import React from "react";
 import Nav from "@/components/Nav";
-import i18nStore from "@/store/i18n.store";
 import PrivacyButtons from "@/components/PrivacyButtons";
+import {getDictionary} from "@/i18n/get-dictionary";
 
 const Privacy = async () => {
-    const dict = i18nStore.getState().dictionary
+    const locale = 'de'
+    const dict = await getDictionary(locale)
 
     return (
         <>
-            <Nav/>
+            <Nav locale={locale} dict={dict}/>
             <div className='container'>
                 <h3 className='font-bold text-3xl my-8'>{dict['privacy.title.1']}</h3>
                 <p className="text-lg font-semibold">{dict['privacy.description.1']}</p>

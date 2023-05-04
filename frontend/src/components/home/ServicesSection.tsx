@@ -1,9 +1,9 @@
-import Image from "next/image";
-import ServicesSectionImage from '../../assets/services-section-image.png'
-import i18nStore from "@/store/i18n.store";
+import {dictionaryType} from "@/types";
 
-const ServicesSection = () => {
-    const dict = i18nStore.getState().dictionary;
+interface ServicesSectionProps {
+    dict: dictionaryType
+}
+const ServicesSection = ({dict}: ServicesSectionProps) => {
     return <div className='container m-auto pt-20 overflow-hidden relative'>
         <div className='flex items-center w-full flex-col'>
             <h3 className='text-center text-xl font-bold text-custom-blue mb-3 z-10'>{dict['services.subtitle']}</h3>

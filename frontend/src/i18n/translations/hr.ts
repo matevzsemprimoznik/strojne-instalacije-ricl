@@ -16,6 +16,10 @@ const translations: dictionaryType = {
 
     "link.projects": "Projekti",
     "link.about": "O nama",
+    "link.projects.value": "projekata",
+    "link.about.value": "o-nama",
+    "link.home.value": "doma",
+    "link.privacy.value": "politika-privatnosti",
 
     "hero.title.1": "Trebate kvalitetne",
     "hero.title.2": "vodoinstalaterske usluge?",

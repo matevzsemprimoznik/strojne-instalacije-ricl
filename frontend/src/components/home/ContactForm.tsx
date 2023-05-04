@@ -1,9 +1,9 @@
 'use client'
 import React, {FC, FormEvent, useState} from "react";
 import sendMessage from "@/lib/contact";
-import {AxiosResponse} from "axios";
 import {dictionaryType, localeType} from "@/types";
 import {useReCaptcha} from "next-recaptcha-v3";
+import Link from "next/link";
 
 interface ContactFormProps {
     dict: dictionaryType
@@ -69,7 +69,7 @@ const ContactForm:FC<ContactFormProps> = ({dict, locale}) => {
         </div>
         <div className='mt-7 flex flex-row'>
             <input onChange={e => setAccepted(e.target.checked)} type='checkbox' id='gdpr' className='mr-2 mt-0.5 w-5 h-5'/>
-            <label htmlFor='gdpr'>{dict['contact.form.gdpr.1']}<a className='text-custom-blue underline' href={`/${locale}/pravilnik-zasebnosti`}>{dict['contact.form.gdpr.2']}</a>{dict['contact.form.gdpr.3']}</label>
+            <label htmlFor='gdpr'>{dict['contact.form.gdpr.1']}<Link className='text-custom-blue underline' href={dict['link.privacy.value']}>{dict['contact.form.gdpr.2']}</Link>{dict['contact.form.gdpr.3']}</label>
         </div>
 
         <div className='flex justify-between items-center flex-row mt-10'>

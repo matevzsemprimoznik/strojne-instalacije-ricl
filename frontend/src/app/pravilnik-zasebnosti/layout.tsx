@@ -1,9 +1,9 @@
-import './globals.css'
 import {Metadata} from "next";
 import {ReactNode} from "react";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
-import Providers from "@/app/providers";
-
+import CookieBanner from "@/components/CookieBanner";
+import Footer from "@/components/Footer";
+import getContact from "@/lib/getContact";
+import {getDictionary} from "@/i18n/get-dictionary";
 
 export const metadata: Metadata = {
     title: 'Strojne inštalacije Ričl',
@@ -20,16 +20,16 @@ interface RootLayoutProps {
 }
 
 const RootLayout = async ({children}: RootLayoutProps) => {
+    const contact = await getContact()
+    const locale = 'sl'
+    const dict = await getDictionary(locale)
+
     return (
-        <html>
-            <head>
-                <link rel="icon" href="favicon.ico"/>
-            </head>
-            <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA4_TRACKING_ID || ''}/>
-            <body>
-            <Providers>{children}</Providers>
-            </body>
-        </html>
+        <>
+            {children}
+            <CookieBanner dict={dict} locale={locale}/>
+            <Footer contact={contact} dict={dict} locale={locale}/>
+        </>
     )
 }
 
