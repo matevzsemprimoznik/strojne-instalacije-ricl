@@ -1,6 +1,12 @@
 import {dictionaryType} from "@/types";
 
 const translations: dictionaryType = {
+    "title": 'Strojne instalacije Ričl',
+    "description": 'Trebate hardverske instalacije za Vaš dom ili poslovni prostor? Ričl je stručnjak za montažu klima uređaja, dizalica topline, izradu kupaonica i polaganje vodovodnih cijevi. Povjerite nam svoje potrebe za instalacijom, a mi ćemo vam pružiti učinkovita i pouzdana rješenja. Kontaktirajte nas danas i uvjerite se sami!',
+    "openGraph.title": 'Strojne instalacije Ričl',
+    "openGraph.description": 'Trebate hardverske instalacije za Vaš dom ili poslovni prostor? Ričl je stručnjak za montažu klima uređaja, dizalica topline, izradu kupaonica i polaganje vodovodnih cijevi. Povjerite nam svoje potrebe za instalacijom, a mi ćemo vam pružiti učinkovita i pouzdana rješenja. Kontaktirajte nas danas i uvjerite se sami!',
+    "openGraph.url": 'https://strojne-instalacije-ricl.vercel.app/hr',
+
     "phone": "Telefon",
     "email": "E. adresa",
     "allow": 'Dopustiti',

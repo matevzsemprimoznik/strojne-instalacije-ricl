@@ -9,16 +9,7 @@ import {getDictionary} from "@/i18n/get-dictionary";
 import i18nStore from "@/store/i18n.store";
 import getContact from "@/lib/getContact";
 import Footer from "@/components/Footer";
-
-export const metadata: Metadata = {
-    title: 'Strojne inštalacije Ričl',
-    description: 'Potrebujete strojne inštalacije za vaš dom ali poslovni prostor? Ričl je strokovnjak za montažo klim, toplotnih črpalk, izdelavo kopalnic ter polaganje vodovodnih cevi. Zaupajte nam vaše potrebe po inštalacijah in zagotovili vam bomo učinkovite in zanesljive rešitve. Kontaktirajte nas danes in se prepričajte sami!',
-    openGraph: {
-        title: 'Strojne inštalacije Ričl',
-        description: 'Potrebujete strojne inštalacije za vaš dom ali poslovni prostor? Ričl je strokovnjak za montažo klim, toplotnih črpalk, izdelavo kopalnic ter polaganje vodovodnih cevi. Zaupajte nam vaše potrebe po inštalacijah in zagotovili vam bomo učinkovite in zanesljive rešitve. Kontaktirajte nas danes in se prepričajte sami!',
-        url: 'https://strojne-instalacije-ricl.vercel.app',
-    }
-}
+import {Html} from "next/document";
 
 interface RootLayoutProps {
     children: ReactNode,
@@ -33,17 +24,11 @@ const RootLayout = async ({children, params: {lang}}: RootLayoutProps) => {
 
     i18nStore.setState({locale: lang, dictionary})
     return (
-        <html lang={lang}>
-            <head>
-                <link rel="icon" href="favicon.ico"/>
-            </head>
-            <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA4_TRACKING_ID || ''}/>
-            <body>
-                <Providers>{children}</Providers>
-                <CookieBanner dict={dictionary} locale={lang}/>
-                <Footer contact={contact}/>
-            </body>
-        </html>
+        <>
+            <Providers>{children}</Providers>
+            <CookieBanner dict={dictionary} locale={lang}/>
+            <Footer contact={contact}/>
+        </>
     )
 }
 
@@ -51,4 +36,19 @@ export default RootLayout
 
 export function generateStaticParams() {
     return i18n.locales.map(locale => ({lang: locale}))
+}
+export async function generateMetadata(
+    { params: {lang} }: { params: {lang: typeof i18n['locales'][number]} },
+): Promise<Metadata> {
+    const dictionary = await getDictionary(lang)
+
+    return {
+        title: dictionary['title'],
+        description: dictionary['description'],
+        openGraph: {
+            title: dictionary['openGraph.title'],
+            description: dictionary['openGraph.description'],
+            url: dictionary['openGraph.url'],
+        },
+    };
 }
