@@ -1,4 +1,3 @@
-import '../globals.css'
 import {Metadata} from "next";
 import {ReactNode} from "react";
 import {i18n} from "@/i18n/config";
@@ -9,7 +8,6 @@ import {getDictionary} from "@/i18n/get-dictionary";
 import i18nStore from "@/store/i18n.store";
 import getContact from "@/lib/getContact";
 import Footer from "@/components/Footer";
-import {Html} from "next/document";
 
 interface RootLayoutProps {
     children: ReactNode,
@@ -24,10 +22,17 @@ const RootLayout = async ({children, params: {lang}}: RootLayoutProps) => {
 
     i18nStore.setState({locale: lang, dictionary})
     return (
+
         <>
+            <head>
+                <link rel="icon" href="favicon.ico"/>
+            </head>
+            <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA4_TRACKING_ID || ''}/>
+            <body>
             <Providers>{children}</Providers>
             <CookieBanner dict={dictionary} locale={lang}/>
             <Footer contact={contact}/>
+            </body>
         </>
     )
 }
