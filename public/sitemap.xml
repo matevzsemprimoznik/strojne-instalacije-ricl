@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <url>
+        <loc>https://strojne-instalacije-ricl.vercel.app/domov</loc>
+        <lastmod>2023-05-09T07:37:14+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://strojne-instalacije-ricl.vercel.app/projekti</loc>
+        <lastmod>2023-05-09T07:37:14+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://strojne-instalacije-ricl.vercel.app/o-nas</loc>
+        <lastmod>2023-05-09T07:37:14+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://strojne-instalacije-ricl.vercel.app/pravilnik-zasebnosti</loc>
+        <lastmod>2023-05-09T07:37:14+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://strojne-instalacije-ricl.vercel.app/heim</loc>
+        <lastmod>2023-05-09T07:37:14+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://strojne-instalacije-ricl.vercel.app/doma</loc>
+        <lastmod>2023-05-09T07:37:14+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://strojne-instalacije-ricl.vercel.app/projekte</loc>
+        <lastmod>2023-05-09T07:37:14+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://strojne-instalacije-ricl.vercel.app/uber-uns</loc>
+        <lastmod>2023-05-09T07:37:14+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://strojne-instalacije-ricl.vercel.app/datenschutz-bestimmungen</loc>
+        <lastmod>2023-05-09T07:37:14+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://strojne-instalacije-ricl.vercel.app/projekata</loc>
+        <lastmod>2023-05-09T07:37:14+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://strojne-instalacije-ricl.vercel.app/o-nama</loc>
+        <lastmod>2023-05-09T07:37:14+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://strojne-instalacije-ricl.vercel.app/politika-privatnosti</loc>
+        <lastmod>2023-05-09T07:37:14+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+
+
+</urlset>

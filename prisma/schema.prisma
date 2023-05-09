@@ -1,0 +1,44 @@
+// schema.prisma
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Language {
+  sl
+  de
+  hr
+}
+
+model Project {
+  id        String     @default(cuid()) @id
+  description     String
+  image    String
+  langugage Language  @default(sl)
+}
+
+model Comment {
+  id            String       @default(cuid()) @id
+  text          String
+  date         DateTime
+  client     String
+  langugage Language  @default(sl)
+}
+
+model Counter {
+  id            String       @default(cuid()) @id
+  projects         Int
+  experience Int
+  clients Int
+}
+
+model Contact {
+  id            String       @default(cuid()) @id
+  phone          String
+  email         String
+}
+
