@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import {formatDate} from "@/utils/date";
 
 type CommentProps = {
-    date: string;
+    date: Date;
     comment: string;
     author: string
 };

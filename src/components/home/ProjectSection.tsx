@@ -1,9 +1,8 @@
 'use client'
 import ProjectsCard from "@/components/ProjectsCard";
 import React, {FC} from "react";
-import {dictionaryType, Project} from "@/types";
-
-
+import {dictionaryType} from "@/types";
+import {Project} from '@prisma/client'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Carousel from "@/components/home/Carousel";

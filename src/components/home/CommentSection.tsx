@@ -1,14 +1,14 @@
 import Comment from "@/components/Comment";
 import React, {FC} from "react";
-import {Comment as CommentType, dictionaryType} from "@/types";
 import Carousel from "@/components/home/Carousel";
+import {Comment as CommentType} from '@prisma/client'
+import {dictionaryType} from "@/types";
 
 interface CommentSectionProps {
     comments: CommentType[]
     dict: dictionaryType
 }
 const CommentSection:FC<CommentSectionProps> = ({comments= [], dict}) => {
-
     return <div>
         <div className='absolute w-full bottom-0 left-0 -z-30'>
             <svg width="100%" height="1491" preserveAspectRatio='none' viewBox="0 0 1728 1491" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +20,7 @@ const CommentSection:FC<CommentSectionProps> = ({comments= [], dict}) => {
 
             <div className='my-16'>
                 <Carousel>
-                    {comments.map((comment, index) => <Comment key={index} date={comment.date.toString()} comment={comment.text} author={comment.client} />)}
+                    {comments.map((comment, index) => <Comment key={index} date={comment.date} comment={comment.text} author={comment.client} />)}
                 </Carousel>
             </div>
         </div>
