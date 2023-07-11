@@ -1,5 +1,6 @@
 import {i18n} from "@/i18n/config";
 import translations from "@/i18n/translations/sl";
+import {ReactNode} from "react";
 
 interface Image {
     id: number,
@@ -26,3 +27,13 @@ export interface ContactMessage {
 
 export type localeType = typeof i18n['locales'][number]
 export type dictionaryType = typeof translations
+
+export interface BasicPageProps {
+    params: {
+        locale: localeType;
+    }
+}
+
+export interface BasicLayoutProps extends BasicPageProps {
+    children: ReactNode;
+}

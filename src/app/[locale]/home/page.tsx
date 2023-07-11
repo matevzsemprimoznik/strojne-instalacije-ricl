@@ -11,23 +11,22 @@ import getCounter from "@/lib/getCounter";
 import getContact from "@/lib/getContact";
 import {getDictionary} from "@/i18n/get-dictionary";
 import Nav from "@/components/Nav";
+import {BasicPageProps} from "@/types";
 
-export const revalidate = 60
-const Home = async () => {
-    const locale = 'de'
+const Home = async ({params: {locale}}: BasicPageProps) => {
     const [projects, comments, counter, contact] = await Promise.all([getProjects(locale), getComments(locale), getCounter(), getContact()])
     const dict = await getDictionary(locale)
 
     return (
-      <>
-          <Nav dict={dict} locale={locale} textColor='text-white'/>
-          <Hero dict={dict}/>
-          <CounterSection dict={dict} counter={counter}/>
-          <ProjectSection projects={projects} dict={dict}/>
-          <ServicesSection dict={dict}/>
-          <CommentSection comments={comments} dict={dict}/>
-          <ContactUsSection dict={dict} contact={contact} locale={locale}/>
-      </>
-  )
+        <>
+            <Nav dict={dict} locale={locale} textColor='text-white'/>
+            <Hero dict={dict}/>
+            <CounterSection dict={dict} counter={counter}/>
+            <ProjectSection projects={projects} dict={dict}/>
+            <ServicesSection dict={dict}/>
+            <CommentSection comments={comments} dict={dict}/>
+            <ContactUsSection dict={dict} contact={contact} locale={locale}/>
+        </>
+    )
 }
 export default Home

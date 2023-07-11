@@ -7,10 +7,10 @@ import Pipe from "@/components/Pipe";
 import WaterMeter from "@/components/WaterMeter";
 import Link from "next/link";
 import {getDictionary} from "@/i18n/get-dictionary";
+import {BasicPageProps} from "@/types";
 
-const About = async () => {
+const About = async ({params: {locale}}: BasicPageProps) => {
     const contact = await getContact()
-    const locale = 'hr'
     const dict = await getDictionary(locale)
 
     return (

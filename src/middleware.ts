@@ -1,7 +1,7 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import type {NextRequest} from 'next/server'
+import {NextResponse} from 'next/server'
 
-import {i18n, localeHomeMapping} from './i18n/config'
+import {getRouteFromLocaleName, i18n, localeHomeMapping} from './i18n/config'
 import acceptLanguage from "accept-language";
 
 const cookieName = 'i18next'
@@ -22,10 +22,15 @@ const getLanguageFromHeader = (header: string | null) => {
 export function middleware(request: NextRequest) {
     const pathname = request.nextUrl.pathname
 
+    const route = getRouteFromLocaleName(pathname.slice(1))
+
+    if (route)
+        return NextResponse.rewrite(new URL(route, request.url))
+
     if (pathname.indexOf('icon') > -1 || pathname.indexOf('chrome') > -1)
         return NextResponse.next()
 
-    let lng:string | null = null
+    let lng: string | null = null
 
     const languageCookie = request.cookies.get(cookieName)
     if (languageCookie)
@@ -44,5 +49,7 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-    matcher: ['/']
+    matcher: [
+        '/((?!_next).*)',
+    ],
 }

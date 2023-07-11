@@ -2,9 +2,9 @@ import React from "react";
 import Nav from "@/components/Nav";
 import PrivacyButtons from "@/components/PrivacyButtons";
 import {getDictionary} from "@/i18n/get-dictionary";
+import {BasicPageProps} from "@/types";
 
-const Privacy = async () => {
-    const locale = 'de'
+const Privacy = async ({params: {locale}}: BasicPageProps) => {
     const dict = await getDictionary(locale)
 
     return (

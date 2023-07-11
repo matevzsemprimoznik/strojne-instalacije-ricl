@@ -3,7 +3,7 @@ const translations = {
     "description": 'Potrebujete strojne inštalacije za vaš dom ali poslovni prostor? Ričl je strokovnjak za montažo klim, toplotnih črpalk, izdelavo kopalnic ter polaganje vodovodnih cevi. Zaupajte nam vaše potrebe po inštalacijah in zagotovili vam bomo učinkovite in zanesljive rešitve. Kontaktirajte nas danes in se prepričajte sami!',
     "openGraph.title": 'Strojne inštalacije Ričl',
     "openGraph.description": 'Potrebujete strojne inštalacije za vaš dom ali poslovni prostor? Ričl je strokovnjak za montažo klim, toplotnih črpalk, izdelavo kopalnic ter polaganje vodovodnih cevi. Zaupajte nam vaše potrebe po inštalacijah in zagotovili vam bomo učinkovite in zanesljive rešitve. Kontaktirajte nas danes in se prepričajte sami!',
-    "openGraph.url": 'https://strojne-instalacije-ricl.vercel.app/sl',
+    "openGraph.url": 'https://strojne-instalacije-ricl.vercel.app/domov',
 
     "phone": "Telefon",
     "email": "El. naslov",
