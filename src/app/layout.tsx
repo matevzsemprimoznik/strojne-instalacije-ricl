@@ -12,6 +12,7 @@ const RootLayout = async ({children}: RootLayoutProps) => {
         <html>
             <head>
                 <link rel="icon" href="favicon.ico"/>
+                <meta name="google-site-verification" content="UQsgnJIYQYh3d4kIIz6SsTNisf9SYvieEqmcMTJZAfk"/>
             </head>
             <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA4_TRACKING_ID || ''}/>
             <body>
