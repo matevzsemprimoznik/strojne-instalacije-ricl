@@ -14,11 +14,11 @@ export const localBusinessData = {
         "latitude": 46.645502,
         "longitude": 15.837802
     },
-    "url": "https://strojne-instalacije-ricl.vercel.app/domov",
+    "url": "https://www.strojne-instalacije-ricl.si/domov",
     "telephone": "+386 41 508744",
     "email": "davorinricl@gmail.com",
     "image": [
-        "https://strojne-instalacije-ricl.vercel.app/local-business-data-image1.png",
-        "https://strojne-instalacije-ricl.vercel.app/local-business-data-image2.png",
+        "https://www.strojne-instalacije-ricl.si/local-business-data-image1.png",
+        "https://www.strojne-instalacije-ricl.si/local-business-data-image2.png",
     ]
 }

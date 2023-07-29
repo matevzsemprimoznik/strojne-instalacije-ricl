@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /cgi-bin/
 Disallow: /api
-Sitemap: https://strojne-instalacije-ricl.vercel.app/sitemap.xml
+Sitemap: https://www.strojne-instalacije-ricl.si/sitemap.xml

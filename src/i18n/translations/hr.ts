@@ -5,7 +5,7 @@ const translations: dictionaryType = {
     "description": 'Trebate hardverske instalacije za Vaš dom ili poslovni prostor? Ričl je stručnjak za montažu klima uređaja, dizalica topline, izradu kupaonica i polaganje vodovodnih cijevi. Povjerite nam svoje potrebe za instalacijom, a mi ćemo vam pružiti učinkovita i pouzdana rješenja. Kontaktirajte nas danas i uvjerite se sami!',
     "openGraph.title": 'Strojne instalacije Ričl',
     "openGraph.description": 'Trebate hardverske instalacije za Vaš dom ili poslovni prostor? Ričl je stručnjak za montažu klima uređaja, dizalica topline, izradu kupaonica i polaganje vodovodnih cijevi. Povjerite nam svoje potrebe za instalacijom, a mi ćemo vam pružiti učinkovita i pouzdana rješenja. Kontaktirajte nas danas i uvjerite se sami!',
-    "openGraph.url": 'https://strojne-instalacije-ricl.vercel.app/doma',
+    "openGraph.url": 'https://www.strojne-instalacije-ricl.si/doma',
 
     "phone": "Telefon",
     "email": "E. adresa",

@@ -2,108 +2,108 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://strojne-instalacije-ricl.vercel.app/domov</loc>
+        <loc>https://www.strojne-instalacije-ricl.si/domov</loc>
         <lastmod>2023-07-14T10:01:29+00:00</lastmod>
         <priority>1.00</priority>
-        <xhtml:link rel="alternate" hreflang="sl" href="https://strojne-instalacije-ricl.vercel.app/domov"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://strojne-instalacije-ricl.vercel.app/heim"/>
-        <xhtml:link rel="alternate" hreflang="hr" href="https://strojne-instalacije-ricl.vercel.app/doma"/>
+        <xhtml:link rel="alternate" hreflang="sl" href="https://www.strojne-instalacije-ricl.si/domov"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.strojne-instalacije-ricl.si/heim"/>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://www.strojne-instalacije-ricl.si/doma"/>
     </url>
     <url>
-        <loc>https://strojne-instalacije-ricl.vercel.app/projekti</loc>
+        <loc>https://www.strojne-instalacije-ricl.si/projekti</loc>
         <lastmod>2023-07-14T10:01:29+00:00</lastmod>
         <priority>0.80</priority>
-        <xhtml:link rel="alternate" hreflang="sl" href="https://strojne-instalacije-ricl.vercel.app/projekti"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://strojne-instalacije-ricl.vercel.app/projekte"/>
-        <xhtml:link rel="alternate" hreflang="hr" href="https://strojne-instalacije-ricl.vercel.app/projekati"/>
+        <xhtml:link rel="alternate" hreflang="sl" href="https://www.strojne-instalacije-ricl.si/projekti"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.strojne-instalacije-ricl.si/projekte"/>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://www.strojne-instalacije-ricl.si/projekati"/>
     </url>
     <url>
-        <loc>https://strojne-instalacije-ricl.vercel.app/o-nas</loc>
+        <loc>https://www.strojne-instalacije-ricl.si/o-nas</loc>
         <lastmod>2023-07-14T10:01:29+00:00</lastmod>
         <priority>0.80</priority>
-        <xhtml:link rel="alternate" hreflang="sl" href="https://strojne-instalacije-ricl.vercel.app/o-nas"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://strojne-instalacije-ricl.vercel.app/uber-uns"/>
-        <xhtml:link rel="alternate" hreflang="hr" href="https://strojne-instalacije-ricl.vercel.app/o-nama"/>
+        <xhtml:link rel="alternate" hreflang="sl" href="https://www.strojne-instalacije-ricl.si/o-nas"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.strojne-instalacije-ricl.si/uber-uns"/>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://www.strojne-instalacije-ricl.si/o-nama"/>
     </url>
     <url>
-        <loc>https://strojne-instalacije-ricl.vercel.app/pravilnik-zasebnosti</loc>
+        <loc>https://www.strojne-instalacije-ricl.si/pravilnik-zasebnosti</loc>
         <lastmod>2023-07-14T10:01:29+00:00</lastmod>
         <priority>0.80</priority>
         <xhtml:link rel="alternate" hreflang="sl"
-                    href="https://strojne-instalacije-ricl.vercel.app/pravilnik-zasebnosti"/>
+                    href="https://www.strojne-instalacije-ricl.si/pravilnik-zasebnosti"/>
         <xhtml:link rel="alternate" hreflang="de"
-                    href="https://strojne-instalacije-ricl.vercel.app/datenschutz-bestimmungen"/>
+                    href="https://www.strojne-instalacije-ricl.si/datenschutz-bestimmungen"/>
         <xhtml:link rel="alternate" hreflang="hr"
-                    href="https://strojne-instalacije-ricl.vercel.app/politika-privatnosti"/>
+                    href="https://www.strojne-instalacije-ricl.si/politika-privatnosti"/>
     </url>
     <url>
-        <loc>https://strojne-instalacije-ricl.vercel.app/heim</loc>
+        <loc>https://www.strojne-instalacije-ricl.si/heim</loc>
         <lastmod>2023-07-14T10:01:29+00:00</lastmod>
         <priority>0.80</priority>
-        <xhtml:link rel="alternate" hreflang="sl" href="https://strojne-instalacije-ricl.vercel.app/domov"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://strojne-instalacije-ricl.vercel.app/heim"/>
-        <xhtml:link rel="alternate" hreflang="hr" href="https://strojne-instalacije-ricl.vercel.app/doma"/>
+        <xhtml:link rel="alternate" hreflang="sl" href="https://www.strojne-instalacije-ricl.si/domov"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.strojne-instalacije-ricl.si/heim"/>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://www.strojne-instalacije-ricl.si/doma"/>
     </url>
     <url>
-        <loc>https://strojne-instalacije-ricl.vercel.app/doma</loc>
+        <loc>https://www.strojne-instalacije-ricl.si/doma</loc>
         <lastmod>2023-07-14T10:01:29+00:00</lastmod>
         <priority>0.80</priority>
-        <xhtml:link rel="alternate" hreflang="sl" href="https://strojne-instalacije-ricl.vercel.app/domov"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://strojne-instalacije-ricl.vercel.app/heim"/>
-        <xhtml:link rel="alternate" hreflang="hr" href="https://strojne-instalacije-ricl.vercel.app/doma"/>
+        <xhtml:link rel="alternate" hreflang="sl" href="https://www.strojne-instalacije-ricl.si/domov"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.strojne-instalacije-ricl.si/heim"/>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://www.strojne-instalacije-ricl.si/doma"/>
     </url>
     <url>
-        <loc>https://strojne-instalacije-ricl.vercel.app/projekte</loc>
+        <loc>https://www.strojne-instalacije-ricl.si/projekte</loc>
         <lastmod>2023-07-14T10:01:29+00:00</lastmod>
         <priority>0.64</priority>
-        <xhtml:link rel="alternate" hreflang="sl" href="https://strojne-instalacije-ricl.vercel.app/projekti"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://strojne-instalacije-ricl.vercel.app/projekte"/>
-        <xhtml:link rel="alternate" hreflang="hr" href="https://strojne-instalacije-ricl.vercel.app/projekati"/>
+        <xhtml:link rel="alternate" hreflang="sl" href="https://www.strojne-instalacije-ricl.si/projekti"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.strojne-instalacije-ricl.si/projekte"/>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://www.strojne-instalacije-ricl.si/projekati"/>
     </url>
     <url>
-        <loc>https://strojne-instalacije-ricl.vercel.app/uber-uns</loc>
+        <loc>https://www.strojne-instalacije-ricl.si/uber-uns</loc>
         <lastmod>2023-07-14T10:01:29+00:00</lastmod>
         <priority>0.64</priority>
-        <xhtml:link rel="alternate" hreflang="sl" href="https://strojne-instalacije-ricl.vercel.app/o-nas"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://strojne-instalacije-ricl.vercel.app/uber-uns"/>
-        <xhtml:link rel="alternate" hreflang="hr" href="https://strojne-instalacije-ricl.vercel.app/o-nama"/>
+        <xhtml:link rel="alternate" hreflang="sl" href="https://www.strojne-instalacije-ricl.si/o-nas"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.strojne-instalacije-ricl.si/uber-uns"/>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://www.strojne-instalacije-ricl.si/o-nama"/>
     </url>
     <url>
-        <loc>https://strojne-instalacije-ricl.vercel.app/datenschutz-bestimmungen</loc>
+        <loc>https://www.strojne-instalacije-ricl.si/datenschutz-bestimmungen</loc>
         <lastmod>2023-07-14T10:01:29+00:00</lastmod>
         <priority>0.64</priority>
         <xhtml:link rel="alternate" hreflang="sl"
-                    href="https://strojne-instalacije-ricl.vercel.app/pravilnik-zasebnosti"/>
+                    href="https://www.strojne-instalacije-ricl.si/pravilnik-zasebnosti"/>
         <xhtml:link rel="alternate" hreflang="de"
-                    href="https://strojne-instalacije-ricl.vercel.app/datenschutz-bestimmungen"/>
+                    href="https://www.strojne-instalacije-ricl.si/datenschutz-bestimmungen"/>
         <xhtml:link rel="alternate" hreflang="hr"
-                    href="https://strojne-instalacije-ricl.vercel.app/politika-privatnosti"/>
+                    href="https://www.strojne-instalacije-ricl.si/politika-privatnosti"/>
     </url>
     <url>
-        <loc>https://strojne-instalacije-ricl.vercel.app/projekati</loc>
+        <loc>https://www.strojne-instalacije-ricl.si/projekati</loc>
         <lastmod>2023-07-14T10:01:29+00:00</lastmod>
         <priority>0.64</priority>
-        <xhtml:link rel="alternate" hreflang="sl" href="https://strojne-instalacije-ricl.vercel.app/projekti"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://strojne-instalacije-ricl.vercel.app/projekte"/>
-        <xhtml:link rel="alternate" hreflang="hr" href="https://strojne-instalacije-ricl.vercel.app/projekati"/>
+        <xhtml:link rel="alternate" hreflang="sl" href="https://www.strojne-instalacije-ricl.si/projekti"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.strojne-instalacije-ricl.si/projekte"/>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://www.strojne-instalacije-ricl.si/projekati"/>
     </url>
     <url>
-        <loc>https://strojne-instalacije-ricl.vercel.app/o-nama</loc>
+        <loc>https://www.strojne-instalacije-ricl.si/o-nama</loc>
         <lastmod>2023-07-14T10:01:29+00:00</lastmod>
         <priority>0.64</priority>
-        <xhtml:link rel="alternate" hreflang="sl" href="https://strojne-instalacije-ricl.vercel.app/o-nas"/>
-        <xhtml:link rel="alternate" hreflang="de" href="https://strojne-instalacije-ricl.vercel.app/uber-uns"/>
-        <xhtml:link rel="alternate" hreflang="hr" href="https://strojne-instalacije-ricl.vercel.app/o-nama"/>
+        <xhtml:link rel="alternate" hreflang="sl" href="https://www.strojne-instalacije-ricl.si/o-nas"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.strojne-instalacije-ricl.si/uber-uns"/>
+        <xhtml:link rel="alternate" hreflang="hr" href="https://www.strojne-instalacije-ricl.si/o-nama"/>
     </url>
     <url>
-        <loc>https://strojne-instalacije-ricl.vercel.app/politika-privatnosti</loc>
+        <loc>https://www.strojne-instalacije-ricl.si/politika-privatnosti</loc>
         <lastmod>2023-07-14T10:01:29+00:00</lastmod>
         <priority>0.64</priority>
         <xhtml:link rel="alternate" hreflang="sl"
-                    href="https://strojne-instalacije-ricl.vercel.app/pravilnik-zasebnosti"/>
+                    href="https://www.strojne-instalacije-ricl.si/pravilnik-zasebnosti"/>
         <xhtml:link rel="alternate" hreflang="de"
-                    href="https://strojne-instalacije-ricl.vercel.app/datenschutz-bestimmungen"/>
+                    href="https://www.strojne-instalacije-ricl.si/datenschutz-bestimmungen"/>
         <xhtml:link rel="alternate" hreflang="hr"
-                    href="https://strojne-instalacije-ricl.vercel.app/politika-privatnosti"/>
+                    href="https://www.strojne-instalacije-ricl.si/politika-privatnosti"/>
     </url>
 </urlset>

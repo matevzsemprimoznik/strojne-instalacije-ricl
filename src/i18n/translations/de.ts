@@ -5,7 +5,7 @@ const translations:dictionaryType = {
     "description": 'Benötigen Sie Hardware-Installationen für Ihr Zuhause oder Ihre Geschäftsräume? Ričl ist Experte für die Installation von Klimaanlagen, Wärmepumpen, den Bau von Badezimmern und die Verlegung von Wasserleitungen. Vertrauen Sie uns Ihre Installationsanforderungen an und wir bieten Ihnen effiziente und zuverlässige Lösungen. Kontaktieren Sie uns noch heute und überzeugen Sie sich selbst!',
     "openGraph.title": 'Maschineninstallationen Ričl',
     "openGraph.description": 'Benötigen Sie Hardware-Installationen für Ihr Zuhause oder Ihre Geschäftsräume? Ričl ist Experte für die Installation von Klimaanlagen, Wärmepumpen, den Bau von Badezimmern und die Verlegung von Wasserleitungen. Vertrauen Sie uns Ihre Installationsanforderungen an und wir bieten Ihnen effiziente und zuverlässige Lösungen. Kontaktieren Sie uns noch heute und überzeugen Sie sich selbst!',
-    "openGraph.url": 'https://strojne-instalacije-ricl.vercel.app/heim',
+    "openGraph.url": 'https://www.strojne-instalacije-ricl.si/heim',
 
     "phone": "Telefon",
     "email": "E-Mail",
