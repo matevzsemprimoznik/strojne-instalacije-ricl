@@ -11,7 +11,7 @@ interface RoutesStructure {
     }
 }
 
-const routesStructure: RoutesStructure = {
+export const routesStructure: RoutesStructure = {
     home: {
         de: 'heim',
         sl: 'domov',

@@ -21,7 +21,8 @@ export async function generateMetadata({params}: BasicPageProps): Promise<Metada
     }
 }
 
-export const revalidate = 60 // 24 hours
+//export const revalidate = 60 // 24 hours
+
 export async function generateStaticParams() {
     return i18n.locales.map((locale) => ({locale}))
 }

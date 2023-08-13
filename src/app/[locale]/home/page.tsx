@@ -12,7 +12,18 @@ import getContact from "@/lib/getContact";
 import {getDictionary} from "@/i18n/get-dictionary";
 import Nav from "@/components/Nav";
 import {BasicPageProps} from "@/types";
+import {Metadata} from "next";
+import {routesStructure} from "@/i18n/config";
 
+export async function generateMetadata({params}: BasicPageProps): Promise<Metadata> {
+    const locale = params.locale
+
+    return {
+        alternates: {
+            canonical: `https://www.strojne-instalacije-ricl.si/${routesStructure.home[locale]}`,
+        }
+    }
+}
 const Home = async ({params: {locale}}: BasicPageProps) => {
     const [projects, comments, counter, contact] = await Promise.all([getProjects(locale), getComments(locale), getCounter(), getContact()])
     const dict = await getDictionary(locale)
